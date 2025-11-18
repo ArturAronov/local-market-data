@@ -3,8 +3,11 @@ package main
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"log"
-	user_agent "market-data/src/user-agent"
+	company_ticker "market-data/src/company-tickers"
+
+	// user_agent "market-data/src/user-agent"
 	"os"
 	"os/signal"
 	"syscall"
@@ -26,7 +29,11 @@ func main() {
 	defer cancel()
 
 	defer db.Close()
-	user_agent.InitDB(ctx, db)
+	// user_agent.InitDB(ctx, db)
+	_, _, err := company_ticker.GetCompanyTickers()
+	if err != nil {
+		fmt.Println(err)
+	}
 
 	log.Println("Server starting on :7700")
 
