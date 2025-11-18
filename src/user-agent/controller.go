@@ -9,6 +9,7 @@ import (
 	"net/mail"
 	"os"
 	"strings"
+	"sync"
 )
 
 func readUserAgentCtx(ctx context.Context, r *bufio.Reader, propmt string) (string, error) {
@@ -38,28 +39,42 @@ func readUserAgentCtx(ctx context.Context, r *bufio.Reader, propmt string) (stri
 	}
 }
 
-var UserAgentCache *UserAgent
+var (
+	UserAgentCache *UserAgent
+	once           sync.Once
+)
 
 func SetUserAgentCache(ctx context.Context, db *sql.DB) error {
-	userAgent, userAgentErr := GetUserAgent(ctx, db)
+	var userAgent *UserAgent
+	var userAgentErr error
+
+	once.Do(func() {
+		userAgent, userAgentErr = GetUserAgent(ctx, db)
+		if userAgentErr != nil {
+			return
+		}
+		if userAgent == nil {
+			setErr := SetUserAgent(ctx, db)
+			if setErr != nil {
+				userAgentErr = fmt.Errorf("failed to set user agent: %w", setErr)
+				return
+			}
+
+			userAgent, userAgentErr = GetUserAgent(ctx, db)
+			if userAgentErr != nil {
+				return
+			}
+		}
+		UserAgentCache = &UserAgent{}
+		if userAgent != nil {
+			UserAgentCache.name = userAgent.name
+			UserAgentCache.email = userAgent.email
+		}
+	})
+
 	if userAgentErr != nil {
 		return userAgentErr
 	}
-
-	if userAgent == nil {
-		setUserAgentErr := SetUserAgent(ctx, db)
-		if setUserAgentErr != nil {
-			return fmt.Errorf("failed to set user agent: %w", setUserAgentErr)
-		}
-	}
-
-	if UserAgentCache == nil {
-		UserAgentCache = &UserAgent{}
-	}
-
-	UserAgentCache.name = userAgent.name
-	UserAgentCache.email = userAgent.email
-
 	return nil
 }
 
@@ -98,11 +113,13 @@ func InitDB(ctx context.Context, db *sql.DB) {
 			os.Exit(1)
 		}
 	} else {
+		fmt.Printf("UserAgentCache %v 1: ", UserAgentCache)
 		userAgentErr := SetUserAgentCache(ctx, db)
 		if userAgentErr != nil {
 			log.Fatal(userAgentErr)
 		}
 
+		fmt.Printf("UserAgentCache %v 2: ", UserAgentCache)
 		if UserAgentCache == nil {
 			SetUserAgent(ctx, db)
 			userAgentErr := SetUserAgentCache(ctx, db)
@@ -112,6 +129,7 @@ func InitDB(ctx context.Context, db *sql.DB) {
 			}
 		}
 
+		fmt.Printf("UserAgentCache %v 3: ", UserAgentCache)
 		log.Printf("Retrieved user agent data: %v", UserAgentCache)
 	}
 }
