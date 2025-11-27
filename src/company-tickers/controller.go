@@ -16,7 +16,7 @@ type secEntry struct {
 
 type secResponse map[string]secEntry
 
-func GetCompanyTickers() (int, *secResponse, error) {
+func GetCompanyTickers(email string) (int, *secResponse, error) {
 	client := &http.Client{}
 	url := "https://www.sec.gov/files/company_tickers.json"
 
@@ -25,7 +25,7 @@ func GetCompanyTickers() (int, *secResponse, error) {
 		log.Fatalf("GetCompanyTickers: Could not create request: %v\n", reqErr)
 	}
 
-	req.Header.Set("User-Agent", "adsf@asd.ee")
+	req.Header.Set("User-Agent", email)
 
 	res, respErr := client.Do(req)
 	if respErr != nil {
@@ -39,7 +39,7 @@ func GetCompanyTickers() (int, *secResponse, error) {
 		log.Fatalf("GetCompanyTickers: Could not read response body: %v\n", bodyErr)
 	}
 
-	if res.StatusCode > 399 {
+	if res.StatusCode > 499 {
 		err := fmt.Errorf(
 			"GetCompanyTickers: Failed to fetch GetCompanyTickers\nStatus code: %d\nbody:body: %v\n",
 			res.StatusCode,
@@ -50,9 +50,11 @@ func GetCompanyTickers() (int, *secResponse, error) {
 	}
 
 	var secRes secResponse
-	jsonErr := json.Unmarshal(body, &secRes)
-	if jsonErr != nil {
-		log.Fatalf("GetCompanyTickers: Failed to unmarshal JSON:\n%v\n", jsonErr)
+	if res.StatusCode < 300 {
+		jsonErr := json.Unmarshal(body, &secRes)
+		if jsonErr != nil {
+			log.Fatalf("GetCompanyTickers: Failed to unmarshal JSON:\n%v\n", jsonErr)
+		}
 	}
 
 	return res.StatusCode, &secRes, nil
