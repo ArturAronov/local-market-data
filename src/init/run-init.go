@@ -3,34 +3,40 @@ package initcmd
 import (
 	"flag"
 	"fmt"
+	company_ticker "market-data/src/company-tickers"
 )
 
-type InitFlags struct {
-	Name  string
-	Email string
-}
-
-var Flags InitFlags
-
 func RunInit(args []string) error {
-	initFlags := flag.NewFlagSet("init", flag.ContinueOnError)
-	initFlags.StringVar(&Flags.Email, "e", "", "Alias of --email")
-	initFlags.StringVar(&Flags.Email, "email", "", "Your email for userAgent header")
+	var email string
 
-	initFlags.StringVar(&Flags.Name, "n", "", "Alias of --name")
-	initFlags.StringVar(&Flags.Name, "name", "", "Your name for userAgent header")
+	initFlags := flag.NewFlagSet("init", flag.ContinueOnError)
+	initFlags.StringVar(&email, "e", "", "Alias of --email")
+	initFlags.StringVar(&email, "email", "", "Your email for userAgent header")
 
 	initFlagsErr := initFlags.Parse(args)
 	if initFlagsErr != nil {
 		return initFlagsErr
 	}
 
-	initFlags.Parse(args)
+	initFlags.Args()
 
-	rest := initFlags.Args()
-	fmt.Println(rest)
-	fmt.Println(Flags.Email)
-	fmt.Println(Flags.Name)
+	secResponseCode, _, secResponseErr := company_ticker.GetCompanyTickers(email)
+
+	fmt.Println(secResponseCode)
+
+	if secResponseErr != nil {
+		return secResponseErr
+	}
+
+	if secResponseCode == 403 {
+		return fmt.Errorf("SEC response returned status code 403 (Forbidden), this is likely due to wrong email address provided")
+	}
+
+	if secResponseCode < 300 {
+		// TODO:
+		// Store email in local db
+		// Add email to cache
+	}
 
 	return nil
 }
