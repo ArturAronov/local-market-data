@@ -1,4 +1,4 @@
 CREATE TABLE IF NOT EXISTS user_email (
     id      INTEGER PRIMARY KEY AUTOINCREMENT,
     email   TEXT    NOT NULL
-)
+);
