@@ -20,7 +20,7 @@ func RunInit(args []string) error {
 
 	initFlags.Args()
 
-	secResponseCode, _, secResponseErr := company_ticker.GetCompanyTickers(email)
+	secResponseCode, _, secResponseErr := company_ticker.GetCompanyTickersC(email)
 
 	fmt.Println(secResponseCode)
 
@@ -29,7 +29,7 @@ func RunInit(args []string) error {
 	}
 
 	if secResponseCode == 403 {
-		return fmt.Errorf("SEC response returned status code 403 (Forbidden), this is likely due to wrong email address provided")
+		return fmt.Errorf("[RunInit] SEC response returned status code 403 (Forbidden), this is likely due to wrong email address provided")
 	}
 
 	if secResponseCode < 300 {
