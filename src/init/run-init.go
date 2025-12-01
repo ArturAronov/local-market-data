@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	company_ticker "market-data/src/company-tickers"
+	"market-data/src/user"
 )
 
 func RunInit(args []string) error {
@@ -22,8 +23,6 @@ func RunInit(args []string) error {
 
 	secResponseCode, _, secResponseErr := company_ticker.GetCompanyTickersC(email)
 
-	fmt.Println(secResponseCode)
-
 	if secResponseErr != nil {
 		return secResponseErr
 	}
@@ -33,9 +32,7 @@ func RunInit(args []string) error {
 	}
 
 	if secResponseCode < 300 {
-		// TODO:
-		// Store email in local db
-		// Add email to cache
+		user.InsertUserEmail(email)
 	}
 
 	return nil
