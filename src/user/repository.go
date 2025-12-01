@@ -4,35 +4,25 @@ import (
 	"context"
 	"database/sql"
 	"fmt"
-	"log"
-	"os"
 )
 
-func CreateUserTable(db *sql.DB) {
-	const TABLE_NAME = "db/user_email-tbl.sql"
+const (
+	INSERT_USER_EMAIL = `
+		INSERT INTO user_email (id, email)
+		VALUES (1, ?)
+		ON CONFLICT(id) DO UPDATE SET
+		  email = excluded.email;`
+)
 
-	sqlBytes, sqlBytesErr := os.ReadFile(TABLE_NAME)
-	if sqlBytesErr != nil {
-		log.Fatalf("Failed to read %s: %v", TABLE_NAME, sqlBytesErr)
+func InsertUserEmail(email string) error {
+	db, dbErr := sql.Open("sqlite3", "_data/user-email.db")
+	if dbErr != nil {
+		return fmt.Errorf("[InsertUserEmail] Failed to open database: %w", dbErr)
 	}
-	_, queryErr := db.Exec(string(sqlBytes))
-	if queryErr != nil {
-		log.Fatalf("Failed to create %v: %v", TABLE_NAME, queryErr)
-	}
-}
 
-func InsertUserEmail(ctx context.Context, db *sql.DB, name string, email string) error {
-	const query = `
-	INSERT INTO user (id, email)
-	VALUES (1, ?)
-	ON CONFLICT(id) DO UPDATE SET
-	  email = excluded.email;
-	`
-
-	_, execErr := db.ExecContext(
-		ctx,
-		query,
-		name, email,
+	_, execErr := db.Exec(
+		INSERT_USER_EMAIL,
+		email,
 	)
 
 	if execErr != nil {
