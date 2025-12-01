@@ -3,6 +3,7 @@ package utils
 import (
 	"log"
 	initcmd "market-data/src/init"
+	"market-data/src/update"
 	"os"
 )
 
@@ -16,6 +17,11 @@ func ParamsResover() {
 	switch args[1] {
 	case "init":
 		runInitErr := initcmd.RunInit(args[2:])
+		if runInitErr != nil {
+			log.Fatalf("ParamsResover: init error %v\n%v\n", runInitErr, os.Stderr)
+		}
+	case "update":
+		runInitErr := update.RunUpdate(args[2:])
 		if runInitErr != nil {
 			log.Fatalf("ParamsResover: init error %v\n%v\n", runInitErr, os.Stderr)
 		}
