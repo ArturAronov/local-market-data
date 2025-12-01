@@ -1,7 +1,6 @@
 package user
 
 import (
-	"context"
 	"database/sql"
 	"fmt"
 )
@@ -12,6 +11,11 @@ const (
 		VALUES (1, ?)
 		ON CONFLICT(id) DO UPDATE SET
 		  email = excluded.email;`
+
+	GET_USER_EMAIL = `
+		SELECT email
+		FROM user_email
+		WHERE id=1;`
 )
 
 func InsertUserEmail(email string) error {
@@ -32,11 +36,15 @@ func InsertUserEmail(email string) error {
 	return nil
 }
 
-func GetUserEmail(ctx context.Context, db *sql.DB) (*string, error) {
-	const query = `SELECT email FROM user_email WHERE id=1;`
+func GetUserEmail() (*string, error) {
 	var email string
 
-	queryErr := db.QueryRowContext(ctx, query).Scan(&email)
+	db, dbErr := sql.Open("sqlite3", "_data/user-email.db")
+	if dbErr != nil {
+		return nil, fmt.Errorf("[InsertUserEmail] Failed to open database: %w", dbErr)
+	}
+
+	queryErr := db.QueryRow(GET_USER_EMAIL).Scan(&email)
 
 	if queryErr != nil {
 		if queryErr == sql.ErrNoRows {
