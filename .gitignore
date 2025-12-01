@@ -1,2 +1,4 @@
-/_data
+_data/*
+!_data/.gitkeep
+
 .DS_Store
