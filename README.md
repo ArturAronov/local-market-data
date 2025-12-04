@@ -9,3 +9,9 @@ TODO:
 - Go 1.24
 - SQLite
 - GCC (used by go-sqlite3)
+
+SEC endpoints:
+
+- https://data.sec.gov/submissions/CIK0000320193.json (reports data)
+- https://data.sec.gov/api/xbrl/companyfacts/CIK0000320193.json (all us-gaap info)
+- https://data.sec.gov/api/xbrl/companyconcept/CIK0000320193/us-gaap/NetIncomeLoss.json

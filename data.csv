@@ -1,0 +1,505 @@
+EntityCommonStockSharesOutstanding,"Entity Common Stock, Shares Outstanding",dei,񎋁,Apple Inc.
+EntityPublicFloat,Entity Public Float,dei,񎋁,Apple Inc.
+AccountsPayable,Accounts Payable (Deprecated 2009-01-31),us-gaap,񎋁,Apple Inc.
+AccountsPayableCurrent,"Accounts Payable, Current",us-gaap,񎋁,Apple Inc.
+AccountsReceivableNetCurrent,"Accounts Receivable, after Allowance for Credit Loss, Current",us-gaap,񎋁,Apple Inc.
+AccruedIncomeTaxesCurrent,"Accrued Income Taxes, Current",us-gaap,񎋁,Apple Inc.
+AccruedIncomeTaxesNoncurrent,"Accrued Income Taxes, Noncurrent",us-gaap,񎋁,Apple Inc.
+AccruedLiabilities,Accrued Liabilities (Deprecated 2009-01-31),us-gaap,񎋁,Apple Inc.
+AccruedLiabilitiesCurrent,"Accrued Liabilities, Current",us-gaap,񎋁,Apple Inc.
+AccruedMarketingCostsCurrent,"Accrued Marketing Costs, Current",us-gaap,񎋁,Apple Inc.
+AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment,"Accumulated Depreciation, Depletion and Amortization, Property, Plant, and Equipment",us-gaap,񎋁,Apple Inc.
+AccumulatedOtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax,"AOCI, Debt Securities, Available-for-sale, Adjustment, after Tax",us-gaap,񎋁,Apple Inc.
+AccumulatedOtherComprehensiveIncomeLossCumulativeChangesInNetGainLossFromCashFlowHedgesEffectNetOfTax,"Accumulated Other Comprehensive Income (Loss), Cumulative Changes in Net Gain (Loss) from Cash Flow Hedges, Effect Net of Tax",us-gaap,񎋁,Apple Inc.
+AccumulatedOtherComprehensiveIncomeLossForeignCurrencyTranslationAdjustmentNetOfTax,"Accumulated Other Comprehensive Income (Loss), Foreign Currency Translation Adjustment, Net of Tax",us-gaap,񎋁,Apple Inc.
+AccumulatedOtherComprehensiveIncomeLossNetOfTax,"Accumulated Other Comprehensive Income (Loss), Net of Tax",us-gaap,񎋁,Apple Inc.
+AdjustmentsToAdditionalPaidInCapitalSharebasedCompensationRequisiteServicePeriodRecognitionValue,"APIC, Share-based Payment Arrangement, Increase for Cost Recognition",us-gaap,񎋁,Apple Inc.
+AdjustmentsToAdditionalPaidInCapitalTaxEffectFromShareBasedCompensation,"Adjustments to Additional Paid in Capital, Income Tax Benefit from Share-based Compensation",us-gaap,񎋁,Apple Inc.
+AdvertisingExpense,Advertising Expense,us-gaap,񎋁,Apple Inc.
+AllocatedShareBasedCompensationExpense,"Share-based Payment Arrangement, Expense",us-gaap,񎋁,Apple Inc.
+AllowanceForDoubtfulAccountsReceivableCurrent,"Accounts Receivable, Allowance for Credit Loss, Current",us-gaap,񎋁,Apple Inc.
+AmortizationOfIntangibleAssets,Amortization of Intangible Assets,us-gaap,񎋁,Apple Inc.
+AntidilutiveSecuritiesExcludedFromComputationOfEarningsPerShareAmount,"Antidilutive Securities Excluded from Computation of Earnings Per Share, Amount",us-gaap,񎋁,Apple Inc.
+Assets,Assets,us-gaap,񎋁,Apple Inc.
+AssetsCurrent,"Assets, Current",us-gaap,񎋁,Apple Inc.
+AssetsNoncurrent,"Assets, Noncurrent",us-gaap,񎋁,Apple Inc.
+AvailableForSaleDebtSecuritiesAccumulatedGrossUnrealizedGainBeforeTax,"Debt Securities, Available-for-sale, Accumulated Gross Unrealized Gain, before Tax",us-gaap,񎋁,Apple Inc.
+AvailableForSaleDebtSecuritiesAccumulatedGrossUnrealizedLossBeforeTax,"Debt Securities, Available-for-sale, Accumulated Gross Unrealized Loss, before Tax",us-gaap,񎋁,Apple Inc.
+AvailableForSaleDebtSecuritiesAmortizedCostBasis,"Debt Securities, Available-for-sale, Amortized Cost",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecurities,Available-for-sale Securities,us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesAccumulatedGrossUnrealizedGainBeforeTax,"Available-for-sale Securities, Accumulated Gross Unrealized Gain, before Tax",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesAccumulatedGrossUnrealizedLossBeforeTax,"Available-for-sale Securities, Accumulated Gross Unrealized Loss, before Tax",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesAmortizedCost,"Available-for-sale Securities, Amortized Cost Basis",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesContinuousUnrealizedLossPosition12MonthsOrLongerAccumulatedLoss,"Available-for-sale Securities, Continuous Unrealized Loss Position, 12 Months or Longer, Accumulated Loss",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesContinuousUnrealizedLossPositionAccumulatedLoss,"Available-for-sale Securities, Continuous Unrealized Loss Position, Accumulated Loss",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesContinuousUnrealizedLossPositionFairValue,"Available-for-sale Securities, Continuous Unrealized Loss Position, Fair Value",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesContinuousUnrealizedLossPositionLessThan12MonthsAccumulatedLoss,"Available-for-sale Securities, Continuous Unrealized Loss Position, Less than 12 Months, Accumulated Loss",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesContinuousUnrealizedLossPositionLessThanTwelveMonthsFairValue,"Available-for-sale Securities, Continuous Unrealized Loss Position, Less than Twelve Months, Fair Value",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesContinuousUnrealizedLossPositionTwelveMonthsOrLongerFairValue,"Available-for-sale Securities, Continuous Unrealized Loss Position, Twelve Months or Longer, Fair Value",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesCurrent,"Available-for-sale Securities, Current",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesDebtMaturitiesRollingAfterYearTenFairValue,"Debt Securities, Available-for-sale, Maturity, Allocated and Single Maturity Date, Rolling after 10 Years, Fair Value",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesDebtMaturitiesRollingYearSixThroughTenFairValue,"Debt Securities, Available-for-sale, Maturity, Allocated and Single Maturity Date, Rolling after Five Through Ten Years, Fair Value",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesDebtMaturitiesRollingYearTwoThroughFiveFairValue,"Debt Securities, Available-for-sale, Maturity, Allocated and Single Maturity Date, Rolling after One Through Five Years, Fair Value",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesDebtMaturitiesSingleMaturityDate,"Debt Securities, Available-for-sale, Maturity, Allocated and Single Maturity Date, Fair Value",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesDebtSecurities,"Debt Securities, Available-for-sale",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesDebtSecuritiesCurrent,"Debt Securities, Available-for-sale, Current",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesDebtSecuritiesNoncurrent,"Debt Securities, Available-for-sale, Noncurrent",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesFairValueDisclosure,"Available-for-sale Securities, Fair Value Disclosure (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesGrossUnrealizedLosses1,"Available-for-sale Securities, Gross Unrealized Losses (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+AvailableForSaleSecuritiesNoncurrent,"Available-for-sale Securities, Noncurrent",us-gaap,񎋁,Apple Inc.
+AvailableforsaleSecuritiesGrossUnrealizedGain,"Available-for-sale Securities, Gross Unrealized Gains (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+BusinessAcquisitionCostOfAcquiredEntityPurchasePrice,"Business Acquisition, Cost of Acquired Entity, Purchase Price (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+BusinessAcquisitionPurchasePriceAllocationAmortizableIntangibleAssets,"Business Acquisition, Purchase Price Allocation, Amortizable Intangible Assets (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+BusinessAcquisitionPurchasePriceAllocationGoodwillAmount,"Business Acquisition, Purchase Price Allocation, Goodwill Amount (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+BusinessAcquisitionPurchasePriceAllocationLiabilitiesAssumed,"Business Acquisition, Purchase Price Allocation, Liabilities Assumed (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedIntangibleAssetsOtherThanGoodwill,"Business Combination, Recognized Identifiable Assets Acquired and Liabilities Assumed, Intangible Assets, Other than Goodwill",us-gaap,񎋁,Apple Inc.
+BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedLiabilities,"Business Combination, Recognized Identifiable Assets Acquired and Liabilities Assumed, Liabilities",us-gaap,񎋁,Apple Inc.
+CapitalExpendituresIncurredButNotYetPaid,Capital Expenditures Incurred but Not yet Paid,us-gaap,񎋁,Apple Inc.
+CapitalizedComputerSoftwareAdditions,"Capitalized Computer Software, Additions",us-gaap,񎋁,Apple Inc.
+CapitalizedComputerSoftwareAmortization,"Capitalized Computer Software, Amortization (Deprecated 2016-01-31)",us-gaap,񎋁,Apple Inc.
+Cash,Cash,us-gaap,񎋁,Apple Inc.
+CashAndCashEquivalentsAtCarryingValue,"Cash and Cash Equivalents, at Carrying Value",us-gaap,񎋁,Apple Inc.
+CashAndCashEquivalentsPeriodIncreaseDecrease,"Cash and Cash Equivalents, Period Increase (Decrease)",us-gaap,񎋁,Apple Inc.
+CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents,"Cash, Cash Equivalents, Restricted Cash and Restricted Cash Equivalents",us-gaap,񎋁,Apple Inc.
+CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect,"Cash, Cash Equivalents, Restricted Cash and Restricted Cash Equivalents, Period Increase (Decrease), Including Exchange Rate Effect",us-gaap,񎋁,Apple Inc.
+CashEquivalentsAtCarryingValue,"Cash Equivalents, at Carrying Value",us-gaap,񎋁,Apple Inc.
+ChangeInUnrealizedGainLossOnFairValueHedgingInstruments,Change in Unrealized Gain (Loss) on Fair Value Hedging Instruments (Deprecated 2013-01-31),us-gaap,񎋁,Apple Inc.
+CollateralAlreadyPostedAggregateFairValue,"Collateral Already Posted, Aggregate Fair Value",us-gaap,񎋁,Apple Inc.
+CommercialPaper,Commercial Paper,us-gaap,񎋁,Apple Inc.
+CommitmentsAndContingencies,Commitments and Contingencies,us-gaap,񎋁,Apple Inc.
+CommonStockDividendsPerShareCashPaid,"Common Stock, Dividends, Per Share, Cash Paid",us-gaap,񎋁,Apple Inc.
+CommonStockDividendsPerShareDeclared,"Common Stock, Dividends, Per Share, Declared",us-gaap,񎋁,Apple Inc.
+CommonStockNoParValue,"Common Stock, No Par Value",us-gaap,񎋁,Apple Inc.
+CommonStockParOrStatedValuePerShare,"Common Stock, Par or Stated Value Per Share",us-gaap,񎋁,Apple Inc.
+CommonStockSharesAuthorized,"Common Stock, Shares Authorized",us-gaap,񎋁,Apple Inc.
+CommonStockSharesIssued,"Common Stock, Shares, Issued",us-gaap,񎋁,Apple Inc.
+CommonStockSharesOutstanding,"Common Stock, Shares, Outstanding",us-gaap,񎋁,Apple Inc.
+CommonStockValue,"Common Stock, Value, Issued",us-gaap,񎋁,Apple Inc.
+CommonStocksIncludingAdditionalPaidInCapital,"Common Stocks, Including Additional Paid in Capital",us-gaap,񎋁,Apple Inc.
+ComprehensiveIncomeNetOfTax,"Comprehensive Income (Loss), Net of Tax, Attributable to Parent",us-gaap,񎋁,Apple Inc.
+ContractWithCustomerLiability,"Contract with Customer, Liability",us-gaap,񎋁,Apple Inc.
+ContractWithCustomerLiabilityCurrent,"Contract with Customer, Liability, Current",us-gaap,񎋁,Apple Inc.
+ContractWithCustomerLiabilityRevenueRecognized,"Contract with Customer, Liability, Revenue Recognized",us-gaap,񎋁,Apple Inc.
+CostOfGoodsAndServicesSold,Cost of Goods and Services Sold,us-gaap,񎋁,Apple Inc.
+CostOfGoodsAndServicesSoldDepreciation,"Cost, Depreciation",us-gaap,񎋁,Apple Inc.
+CostOfReimbursableExpense,Cost of Reimbursable Expense (Deprecated 2018-01-31),us-gaap,񎋁,Apple Inc.
+CumulativeEffectOfInitialAdoptionOfFIN48,Cumulative Effect of Initial Adoption of FIN 48 (Deprecated 2011-01-31),us-gaap,񎋁,Apple Inc.
+CumulativeEffectOfInitialAdoptionOfNewAccountingPrinciple,Cumulative Effect of Initial Adoption of New Accounting Principle (Deprecated 2011-01-31),us-gaap,񎋁,Apple Inc.
+CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),us-gaap,񎋁,Apple Inc.
+CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),us-gaap,񎋁,Apple Inc.
+CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),us-gaap,񎋁,Apple Inc.
+DebtInstrumentCarryingAmount,"Long-term Debt, Gross",us-gaap,񎋁,Apple Inc.
+DebtInstrumentUnamortizedDiscount,"Debt Instrument, Unamortized Discount",us-gaap,񎋁,Apple Inc.
+DebtInstrumentUnamortizedDiscountPremiumAndDebtIssuanceCostsNet,"Debt Instrument, Unamortized Discount (Premium) and Debt Issuance Costs, Net",us-gaap,񎋁,Apple Inc.
+DebtInstrumentUnamortizedDiscountPremiumNet,"Debt Instrument, Unamortized Discount (Premium), Net",us-gaap,񎋁,Apple Inc.
+DebtSecuritiesAvailableForSaleContinuousUnrealizedLossPosition12MonthsOrLonger,"Debt Securities, Available-for-sale, Continuous Unrealized Loss Position, 12 Months or Longer",us-gaap,񎋁,Apple Inc.
+DebtSecuritiesAvailableForSaleContinuousUnrealizedLossPosition12MonthsOrLongerAccumulatedLoss,"Debt Securities, Available-for-sale, Continuous Unrealized Loss Position, 12 Months or Longer, Accumulated Loss",us-gaap,񎋁,Apple Inc.
+DebtSecuritiesAvailableForSaleContinuousUnrealizedLossPositionLessThan12Months,"Debt Securities, Available-for-sale, Continuous Unrealized Loss Position, Less than 12 Months",us-gaap,񎋁,Apple Inc.
+DebtSecuritiesAvailableForSaleContinuousUnrealizedLossPositionLessThan12MonthsAccumulatedLoss,"Debt Securities, Available-for-sale, Continuous Unrealized Loss Position, Less than 12 Months, Accumulated Loss",us-gaap,񎋁,Apple Inc.
+DebtSecuritiesAvailableForSaleRestricted,"Debt Securities, Available-for-sale, Restricted",us-gaap,񎋁,Apple Inc.
+DebtSecuritiesAvailableForSaleUnrealizedLossPosition,"Debt Securities, Available-for-sale, Unrealized Loss Position",us-gaap,񎋁,Apple Inc.
+DebtSecuritiesAvailableForSaleUnrealizedLossPositionAccumulatedLoss,"Debt Securities, Available-for-sale, Unrealized Loss Position, Accumulated Loss",us-gaap,񎋁,Apple Inc.
+DecreaseInUnrecognizedTaxBenefitsIsReasonablyPossible,Decrease in Unrecognized Tax Benefits is Reasonably Possible,us-gaap,񎋁,Apple Inc.
+DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),us-gaap,񎋁,Apple Inc.
+DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),us-gaap,񎋁,Apple Inc.
+DeferredIncomeTaxAssetsNet,"Deferred Income Tax Assets, Net",us-gaap,񎋁,Apple Inc.
+DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),us-gaap,񎋁,Apple Inc.
+DeferredIncomeTaxLiabilities,"Deferred Tax Liabilities, Gross",us-gaap,񎋁,Apple Inc.
+DeferredIncomeTaxLiabilitiesNet,"Deferred Income Tax Liabilities, Net",us-gaap,񎋁,Apple Inc.
+DeferredRevenueCurrent,"Deferred Revenue, Current",us-gaap,񎋁,Apple Inc.
+DeferredRevenueNoncurrent,"Deferred Revenue, Noncurrent",us-gaap,񎋁,Apple Inc.
+DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsDeferredIncome,"Deferred Tax Assets, Deferred Income",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsGoodwillAndIntangibleAssets,"Deferred Tax Assets, Goodwill and Intangible Assets",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsGross,"Deferred Tax Assets, Gross",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsLiabilitiesNet,"Deferred Tax Assets, Net",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsLiabilitiesNetCurrent,"Deferred Tax Assets, Net, Current",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsNet,"Deferred Tax Assets, Net of Valuation Allowance",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsNetCurrent,"Deferred Tax Assets, Net of Valuation Allowance, Current",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsOther,"Deferred Tax Assets, Other",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsOtherComprehensiveLoss,"Deferred Tax Assets, Other Comprehensive Loss",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsPropertyPlantAndEquipment,"Deferred Tax Assets, Property, Plant and Equipment",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsTaxCreditCarryforwards,"Deferred Tax Assets, Tax Credit Carryforwards",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsTaxCreditCarryforwardsForeign,"Deferred Tax Assets, Tax Credit Carryforwards, Foreign",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsTaxCreditCarryforwardsResearch,"Deferred Tax Assets, Tax Credit Carryforwards, Research",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsTaxDeferredExpenseCompensationAndBenefitsShareBasedCompensationCost,"Deferred Tax Assets, Tax Deferred Expense, Compensation and Benefits, Share-based Compensation Cost",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsTaxDeferredExpenseReservesAndAccruals,"Deferred Tax Assets, Tax Deferred Expense, Reserves and Accruals",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsUnrealizedLossesOnAvailableforSaleSecuritiesGross,"Deferred Tax Assets, Unrealized Losses on Available-for-Sale Securities, Gross",us-gaap,񎋁,Apple Inc.
+DeferredTaxAssetsValuationAllowance,"Deferred Tax Assets, Valuation Allowance",us-gaap,񎋁,Apple Inc.
+DeferredTaxLiabilities,"Deferred Tax Liabilities, Net",us-gaap,񎋁,Apple Inc.
+DeferredTaxLiabilitiesLeasingArrangements,"Deferred Tax Liabilities, Leasing Arrangements",us-gaap,񎋁,Apple Inc.
+DeferredTaxLiabilitiesNoncurrent,"Deferred Tax Liabilities, Net, Noncurrent",us-gaap,񎋁,Apple Inc.
+DeferredTaxLiabilitiesOther,"Deferred Tax Liabilities, Other",us-gaap,񎋁,Apple Inc.
+DeferredTaxLiabilitiesOtherComprehensiveIncome,"Deferred Tax Liabilities, Other Comprehensive Income",us-gaap,񎋁,Apple Inc.
+DeferredTaxLiabilitiesPropertyPlantAndEquipment,"Deferred Tax Liabilities, Property, Plant and Equipment",us-gaap,񎋁,Apple Inc.
+DeferredTaxLiabilitiesUndistributedForeignEarnings,"Deferred Tax Liabilities, Undistributed Foreign Earnings",us-gaap,񎋁,Apple Inc.
+DeferredTaxLiabilityNotRecognizedAmountOfUnrecognizedDeferredTaxLiabilityUndistributedEarningsOfForeignSubsidiaries,"Deferred Tax Liability Not Recognized, Amount of Unrecognized Deferred Tax Liability, Undistributed Earnings of Foreign Subsidiaries",us-gaap,񎋁,Apple Inc.
+DefinedContributionPlanCostRecognized,"Defined Contribution Plan, Cost",us-gaap,񎋁,Apple Inc.
+DefinedContributionPlanMaximumAnnualContributionPerEmployeeAmount,"Defined Contribution Plan, Maximum Annual Contribution Per Employee, Amount (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+DefinedContributionPlanMaximumAnnualContributionsPerEmployeeAmount,"Defined Contribution Plan, Maximum Annual Contributions Per Employee, Amount",us-gaap,񎋁,Apple Inc.
+Depreciation,Depreciation,us-gaap,񎋁,Apple Inc.
+DepreciationAmortizationAndAccretionNet,"Depreciation, Amortization and Accretion, Net",us-gaap,񎋁,Apple Inc.
+DepreciationAndAmortization,"Depreciation, Depletion and Amortization, Nonproduction",us-gaap,񎋁,Apple Inc.
+DepreciationDepletionAndAmortization,"Depreciation, Depletion and Amortization",us-gaap,񎋁,Apple Inc.
+DerivativeCollateralObligationToReturnCash,"Derivative, Collateral, Obligation to Return Cash",us-gaap,񎋁,Apple Inc.
+DerivativeFairValueOfDerivativeNet,"Derivative, Fair Value, Net",us-gaap,񎋁,Apple Inc.
+DerivativeInstrumentsGainLossReclassifiedFromAccumulatedOCIIntoIncomeEffectivePortionNet,"Derivative Instruments, Gain (Loss) Reclassified from Accumulated OCI into Income, Effective Portion, Net",us-gaap,񎋁,Apple Inc.
+DerivativeInstrumentsGainLossRecognizedInIncomeIneffectivePortionAndAmountExcludedFromEffectivenessTestingNet,"Derivative Instruments, Gain (Loss) Recognized in Income, Ineffective Portion and Amount Excluded from Effectiveness Testing, Net",us-gaap,񎋁,Apple Inc.
+DerivativeInstrumentsGainLossRecognizedInOtherComprehensiveIncomeEffectivePortionNet,"Derivative Instruments, Gain (Loss) Recognized in Other Comprehensive Income (Loss), Effective Portion, Net (Deprecated 2018-01-31)",us-gaap,񎋁,Apple Inc.
+DerivativeInstrumentsNotDesignatedAsHedgingInstrumentsGainLossNet,"Derivative Instruments Not Designated as Hedging Instruments, Gain (Loss), Net",us-gaap,񎋁,Apple Inc.
+Dividends,Dividends,us-gaap,񎋁,Apple Inc.
+EarningsPerShareBasic,"Earnings Per Share, Basic",us-gaap,񎋁,Apple Inc.
+EarningsPerShareDiluted,"Earnings Per Share, Diluted",us-gaap,񎋁,Apple Inc.
+EffectiveIncomeTaxRateContinuingOperations,"Effective Income Tax Rate Reconciliation, Percent",us-gaap,񎋁,Apple Inc.
+EffectiveIncomeTaxRateReconciliationAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation, at Federal Statutory Income Tax Rate, Percent",us-gaap,񎋁,Apple Inc.
+EffectiveIncomeTaxRateReconciliationFdiiAmount,,us-gaap,񎋁,Apple Inc.
+EffectiveIncomeTaxRateReconciliationForeignIncomeTaxRateDifferential,"Effective Income Tax Rate Reconciliation, Foreign Income Tax Rate Differential, Percent",us-gaap,񎋁,Apple Inc.
+EffectiveIncomeTaxRateReconciliationShareBasedCompensationExcessTaxBenefitAmount,"Effective Income Tax Rate Reconciliation, Tax Expense (Benefit), Share-based Payment Arrangement, Amount",us-gaap,񎋁,Apple Inc.
+EffectiveIncomeTaxRateReconciliationTaxCutsAndJobsActOf2017Amount,"Effective Income Tax Rate Reconciliation, Tax Cuts and Jobs Act, Amount",us-gaap,񎋁,Apple Inc.
+EmployeeRelatedLiabilitiesCurrent,"Employee-related Liabilities, Current",us-gaap,񎋁,Apple Inc.
+EmployeeServiceShareBasedCompensationCashFlowEffectCashUsedToSettleAwards,"Share-based Payment Arrangement, Cash Used to Settle Award",us-gaap,񎋁,Apple Inc.
+EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized,"Share-based Payment Arrangement, Nonvested Award, Cost Not yet Recognized, Amount",us-gaap,񎋁,Apple Inc.
+EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognizedPeriodForRecognition,"Employee Service Share-based Compensation, Nonvested Awards, Total Compensation Cost Not yet Recognized, Period for Recognition (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+EmployeeServiceShareBasedCompensationTaxBenefitFromCompensationExpense,"Share-based Payment Arrangement, Expense, Tax Benefit",us-gaap,񎋁,Apple Inc.
+EmployeeServiceShareBasedCompensationUnrecognizedCompensationCostsOnNonvestedAwards,"Employee Service Share-based Compensation, Unrecognized Compensation Costs on Nonvested Awards (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+EmployeeServiceShareBasedCompensationUnrecognizedCompensationCostsOnNonvestedAwardsWeightedAveragePeriodOfRecognition,"Employee Service Share-based Compensation, Unrecognized Compensation Costs on Nonvested Awards, Weighted Average Period of Recognition (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+EquitySecuritiesWithoutReadilyDeterminableFairValueAmount,"Equity Securities without Readily Determinable Fair Value, Amount",us-gaap,񎋁,Apple Inc.
+ExcessTaxBenefitFromShareBasedCompensationFinancingActivities,"Excess Tax Benefit from Share-based Compensation, Financing Activities",us-gaap,񎋁,Apple Inc.
+FairValueAssetsMeasuredOnRecurringBasisCashAndCashEquivalents,"Fair Value, Assets Measured on Recurring Basis, Cash and Cash Equivalents (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+FairValueAssetsMeasuredOnRecurringBasisDerivativeFinancialInstrumentsAssets,"Fair Value, Assets Measured on Recurring Basis, Derivative Financial Instruments, Assets (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+FairValueHedgesAtFairValueNet,"Fair Value Hedges, Net",us-gaap,񎋁,Apple Inc.
+FairValueLiabilitiesMeasuredOnRecurringBasisDerivativeFinancialInstrumentsLiabilities,"Fair Value, Liabilities Measured on Recurring Basis, Derivative Financial Instruments, Liabilities (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+FederalIncomeTaxExpenseBenefitContinuingOperations,"Federal Income Tax Expense (Benefit), Continuing Operations",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiability,"Finance Lease, Liability",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityCurrent,"Finance Lease, Liability, Current",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityNoncurrent,"Finance Lease, Liability, Noncurrent",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityPaymentsDue,"Finance Lease, Liability, Payment, Due",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityPaymentsDueAfterYearFive,"Finance Lease, Liability, to be Paid, after Year Five",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityPaymentsDueNextTwelveMonths,"Finance Lease, Liability, to be Paid, Year One",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityPaymentsDueYearFive,"Finance Lease, Liability, to be Paid, Year Five",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityPaymentsDueYearFour,"Finance Lease, Liability, to be Paid, Year Four",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityPaymentsDueYearThree,"Finance Lease, Liability, to be Paid, Year Three",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityPaymentsDueYearTwo,"Finance Lease, Liability, to be Paid, Year Two",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityPaymentsRemainderOfFiscalYear,"Finance Lease, Liability, to be Paid, Remainder of Fiscal Year",us-gaap,񎋁,Apple Inc.
+FinanceLeaseLiabilityUndiscountedExcessAmount,"Finance Lease, Liability, Undiscounted Excess Amount",us-gaap,񎋁,Apple Inc.
+FinanceLeaseRightOfUseAsset,"Finance Lease, Right-of-Use Asset, after Accumulated Amortization",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsAccumulatedAmortization,"Finite-Lived Intangible Assets, Accumulated Amortization",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsAmortizationExpense,"Finite-Lived Intangible Assets, Amortization Expense (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsAmortizationExpenseAfterYearFive,"Finite-Lived Intangible Asset, Expected Amortization, after Year Five",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsAmortizationExpenseNextTwelveMonths,"Finite-Lived Intangible Asset, Expected Amortization, Year One",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsAmortizationExpenseYearFive,"Finite-Lived Intangible Asset, Expected Amortization, Year Five",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsAmortizationExpenseYearFour,"Finite-Lived Intangible Asset, Expected Amortization, Year Four",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsAmortizationExpenseYearThree,"Finite-Lived Intangible Asset, Expected Amortization, Year Three",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsAmortizationExpenseYearTwo,"Finite-Lived Intangible Asset, Expected Amortization, Year Two",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsGross,"Finite-Lived Intangible Assets, Gross",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsNet,"Finite-Lived Intangible Assets, Net",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsUsefulLifeMaximum,"Finite-Lived Intangible Assets, Useful Life, Maximum (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+FiniteLivedIntangibleAssetsUsefulLifeMinimum,"Finite-Lived Intangible Assets, Useful Life, Minimum (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+ForeignCurrencyDerivativeAssetsAtFairValue,Foreign Currency Derivative Assets at Fair Value (Deprecated 2014-01-31),us-gaap,񎋁,Apple Inc.
+ForeignCurrencyDerivativeInstrumentsNotDesignatedAsHedgingInstrumentsAssetAtFairValue,"Foreign Currency Derivative Instruments Not Designated as Hedging Instruments, Asset at Fair Value",us-gaap,񎋁,Apple Inc.
+ForeignCurrencyDerivativeInstrumentsNotDesignatedAsHedgingInstrumentsLiabilityAtFairValue,"Foreign Currency Derivative Instruments Not Designated as Hedging Instruments, Liability at Fair Value",us-gaap,񎋁,Apple Inc.
+ForeignCurrencyDerivativeLiabilitiesAtFairValue,Foreign Currency Derivative Liabilities at Fair Value (Deprecated 2014-01-31),us-gaap,񎋁,Apple Inc.
+ForeignIncomeTaxExpenseBenefitContinuingOperations,"Foreign Income Tax Expense (Benefit), Continuing Operations",us-gaap,񎋁,Apple Inc.
+FurnitureAndFixturesGross,"Furniture and Fixtures, Gross",us-gaap,񎋁,Apple Inc.
+FutureAmortizationExpenseYearFive,"Future Amortization Expense, Year Five (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+FutureAmortizationExpenseYearFour,"Future Amortization Expense, Year Four (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+FutureAmortizationExpenseYearOne,"Future Amortization Expense, Year One (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+FutureAmortizationExpenseYearThree,"Future Amortization Expense, Year Three (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+FutureAmortizationExpenseYearTwo,"Future Amortization Expense, Year Two (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+GainLossFromComponentsExcludedFromAssessmentOfFairValueHedgeEffectivenessNet,"Gain (Loss) from Components Excluded from Assessment of Fair Value Hedge Effectiveness, Net",us-gaap,񎋁,Apple Inc.
+GainLossOnSaleOfPropertyPlantEquipment,Gain (Loss) on Disposition of Property Plant Equipment,us-gaap,񎋁,Apple Inc.
+GeneralAndAdministrativeExpense,General and Administrative Expense,us-gaap,񎋁,Apple Inc.
+Goodwill,Goodwill,us-gaap,񎋁,Apple Inc.
+GoodwillAcquiredDuringPeriod,"Goodwill, Acquired During Period",us-gaap,񎋁,Apple Inc.
+GoodwillImpairmentLoss,"Goodwill, Impairment Loss",us-gaap,񎋁,Apple Inc.
+GrossProfit,Gross Profit,us-gaap,񎋁,Apple Inc.
+HedgedAssetFairValueHedge,"Hedged Asset, Fair Value Hedge",us-gaap,񎋁,Apple Inc.
+HedgedLiabilityFairValueHedge,"Hedged Liability, Fair Value Hedge",us-gaap,񎋁,Apple Inc.
+HeldToMaturitySecurities,"Debt Securities, Held-to-maturity",us-gaap,񎋁,Apple Inc.
+ImpairmentOfIntangibleAssetsExcludingGoodwill,Impairment of Intangible Assets (Excluding Goodwill),us-gaap,񎋁,Apple Inc.
+ImpairmentOfIntangibleAssetsIndefinitelivedExcludingGoodwill,"Impairment of Intangible Assets, Indefinite-lived (Excluding Goodwill)",us-gaap,񎋁,Apple Inc.
+IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",us-gaap,񎋁,Apple Inc.
+IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",us-gaap,񎋁,Apple Inc.
+IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments,"Income (Loss) from Continuing Operations before Equity Method Investments, Income Taxes, Noncontrolling Interest",us-gaap,񎋁,Apple Inc.
+IncomeTaxExaminationInterestExpense,"Income Tax Examination, Interest Expense",us-gaap,񎋁,Apple Inc.
+IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationChangeInDeferredTaxAssetsValuationAllowance,"Effective Income Tax Rate Reconciliation, Change in Deferred Tax Assets Valuation Allowance, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationDeductionsQualifiedProductionActivities,"Effective Income Tax Rate Reconciliation, Deduction, Qualified Production Activity, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationForeignIncomeTaxRateDifferential,"Effective Income Tax Rate Reconciliation, Foreign Income Tax Rate Differential, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationNondeductibleExpenseShareBasedCompensationCost,"Effective Income Tax Rate Reconciliation, Nondeductible Expense, Share-based Payment Arrangement, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationOtherAdjustments,"Effective Income Tax Rate Reconciliation, Other Adjustments, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationOtherReconcilingItems,"Effective Income Tax Rate Reconciliation, Other Reconciling Items, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationStateAndLocalIncomeTaxes,"Effective Income Tax Rate Reconciliation, State and Local Income Taxes, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationTaxContingenciesDomestic,"Effective Income Tax Rate Reconciliation, Tax Contingency, Domestic, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationTaxCreditsResearch,"Effective Income Tax Rate Reconciliation, Tax Credit, Research, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxReconciliationTaxSettlementsDomestic,"Effective Income Tax Rate Reconciliation, Tax Settlement, Domestic, Amount",us-gaap,񎋁,Apple Inc.
+IncomeTaxesPaidNet,"Income Taxes Paid, Net",us-gaap,񎋁,Apple Inc.
+IncreaseDecreaseInAccountsPayable,Increase (Decrease) in Accounts Payable,us-gaap,񎋁,Apple Inc.
+IncreaseDecreaseInAccountsReceivable,Increase (Decrease) in Accounts Receivable,us-gaap,񎋁,Apple Inc.
+IncreaseDecreaseInContractWithCustomerLiability,"Increase (Decrease) in Contract with Customer, Liability",us-gaap,񎋁,Apple Inc.
+IncreaseDecreaseInDeferredRevenue,Increase (Decrease) in Deferred Revenue,us-gaap,񎋁,Apple Inc.
+IncreaseDecreaseInInventories,Increase (Decrease) in Inventories,us-gaap,񎋁,Apple Inc.
+IncreaseDecreaseInOtherOperatingAssets,Increase (Decrease) in Other Operating Assets,us-gaap,񎋁,Apple Inc.
+IncreaseDecreaseInOtherOperatingLiabilities,Increase (Decrease) in Other Operating Liabilities,us-gaap,񎋁,Apple Inc.
+IncreaseDecreaseInOtherReceivables,Increase (Decrease) in Other Receivables,us-gaap,񎋁,Apple Inc.
+IncrementalCommonSharesAttributableToShareBasedPaymentArrangements,Incremental Common Shares Attributable to Dilutive Effect of Share-based Payment Arrangements,us-gaap,񎋁,Apple Inc.
+IndefiniteLivedIntangibleAssetsExcludingGoodwill,Indefinite-lived Intangible Assets (Excluding Goodwill),us-gaap,񎋁,Apple Inc.
+IntangibleAssetsGrossExcludingGoodwill,"Intangible Assets, Gross (Excluding Goodwill)",us-gaap,񎋁,Apple Inc.
+IntangibleAssetsNetExcludingGoodwill,"Intangible Assets, Net (Excluding Goodwill)",us-gaap,񎋁,Apple Inc.
+InterestCostsIncurred,Interest Costs Incurred,us-gaap,񎋁,Apple Inc.
+InterestExpense,Interest Expense,us-gaap,񎋁,Apple Inc.
+InterestExpenseDebt,"Interest Expense, Debt",us-gaap,񎋁,Apple Inc.
+InterestPaid,"Interest Paid, Including Capitalized Interest, Operating and Investing Activities",us-gaap,񎋁,Apple Inc.
+InterestPaidNet,"Interest Paid, Excluding Capitalized Interest, Operating Activities",us-gaap,񎋁,Apple Inc.
+InventoryFinishedGoodsNetOfReserves,"Inventory, Finished Goods, Net of Reserves",us-gaap,񎋁,Apple Inc.
+InventoryNet,"Inventory, Net",us-gaap,񎋁,Apple Inc.
+InventoryPartsAndComponentsNetOfReserves,"Inventory, Parts and Components, Net of Reserves",us-gaap,񎋁,Apple Inc.
+InventoryRawMaterialsAndPurchasedPartsNetOfReserves,"Inventory, Raw Materials and Purchased Parts, Net of Reserves",us-gaap,񎋁,Apple Inc.
+InventoryWorkInProcessAndRawMaterialsNetOfReserves,"Inventory, Work in Process and Raw Materials, Net of Reserves",us-gaap,񎋁,Apple Inc.
+InvestmentIncomeInterestAndDividend,"Investment Income, Interest and Dividend",us-gaap,񎋁,Apple Inc.
+LeaseAndRentalExpense,"Operating Leases, Rent Expense",us-gaap,񎋁,Apple Inc.
+LeaseholdImprovementsGross,"Leasehold Improvements, Gross",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityPaymentsDue,"Lessee, Operating Lease, Liability, to be Paid",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityPaymentsDueAfterYearFive,"Lessee, Operating Lease, Liability, to be Paid, after Year Five",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths,"Lessee, Operating Lease, Liability, to be Paid, Year One",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityPaymentsDueYearFive,"Lessee, Operating Lease, Liability, to be Paid, Year Five",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityPaymentsDueYearFour,"Lessee, Operating Lease, Liability, to be Paid, Year Four",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityPaymentsDueYearThree,"Lessee, Operating Lease, Liability, to be Paid, Year Three",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityPaymentsDueYearTwo,"Lessee, Operating Lease, Liability, to be Paid, Year Two",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityPaymentsRemainderOfFiscalYear,"Lessee, Operating Lease, Liability, to be Paid, Remainder of Fiscal Year",us-gaap,񎋁,Apple Inc.
+LesseeOperatingLeaseLiabilityUndiscountedExcessAmount,"Lessee, Operating Lease, Liability, Undiscounted Excess Amount",us-gaap,񎋁,Apple Inc.
+Liabilities,Liabilities,us-gaap,񎋁,Apple Inc.
+LiabilitiesAndStockholdersEquity,Liabilities and Equity,us-gaap,񎋁,Apple Inc.
+LiabilitiesCurrent,"Liabilities, Current",us-gaap,񎋁,Apple Inc.
+LiabilitiesNoncurrent,"Liabilities, Noncurrent",us-gaap,񎋁,Apple Inc.
+LongTermDebt,Long-term Debt,us-gaap,񎋁,Apple Inc.
+LongTermDebtCurrent,"Long-term Debt, Current Maturities",us-gaap,񎋁,Apple Inc.
+LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive,"Long-Term Debt, Maturity, after Year Five",us-gaap,񎋁,Apple Inc.
+LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths,"Long-Term Debt, Maturity, Year One",us-gaap,񎋁,Apple Inc.
+LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive,"Long-Term Debt, Maturity, Year Five",us-gaap,񎋁,Apple Inc.
+LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour,"Long-Term Debt, Maturity, Year Four",us-gaap,񎋁,Apple Inc.
+LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree,"Long-Term Debt, Maturity, Year Three",us-gaap,񎋁,Apple Inc.
+LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo,"Long-Term Debt, Maturity, Year Two",us-gaap,񎋁,Apple Inc.
+LongTermDebtMaturitiesRepaymentsOfPrincipalRemainderOfFiscalYear,"Long-Term Debt, Maturity, Remainder of Fiscal Year",us-gaap,񎋁,Apple Inc.
+LongTermDebtNoncurrent,"Long-term Debt, Excluding Current Maturities",us-gaap,񎋁,Apple Inc.
+LongTermPurchaseCommitmentAmount,"Long-term Purchase Commitment, Amount",us-gaap,񎋁,Apple Inc.
+MarketableSecuritiesCurrent,"Marketable Securities, Current",us-gaap,񎋁,Apple Inc.
+MarketableSecuritiesNoncurrent,"Marketable Securities, Noncurrent",us-gaap,񎋁,Apple Inc.
+MarketableSecuritiesRealizedGainLoss,"Marketable Securities, Realized Gain (Loss)",us-gaap,񎋁,Apple Inc.
+MarketingExpense,Marketing Expense,us-gaap,񎋁,Apple Inc.
+NetCashProvidedByUsedInFinancingActivities,Net Cash Provided by (Used in) Financing Activities,us-gaap,񎋁,Apple Inc.
+NetCashProvidedByUsedInFinancingActivitiesContinuingOperations,"Net Cash Provided by (Used in) Financing Activities, Continuing Operations",us-gaap,񎋁,Apple Inc.
+NetCashProvidedByUsedInInvestingActivities,Net Cash Provided by (Used in) Investing Activities,us-gaap,񎋁,Apple Inc.
+NetCashProvidedByUsedInInvestingActivitiesContinuingOperations,"Net Cash Provided by (Used in) Investing Activities, Continuing Operations",us-gaap,񎋁,Apple Inc.
+NetCashProvidedByUsedInOperatingActivities,Net Cash Provided by (Used in) Operating Activities,us-gaap,񎋁,Apple Inc.
+NetCashProvidedByUsedInOperatingActivitiesContinuingOperations,"Net Cash Provided by (Used in) Operating Activities, Continuing Operations",us-gaap,񎋁,Apple Inc.
+NetIncomeLoss,Net Income (Loss) Attributable to Parent,us-gaap,񎋁,Apple Inc.
+NoncurrentAssets,Long-Lived Assets,us-gaap,񎋁,Apple Inc.
+NonoperatingIncomeExpense,Nonoperating Income (Expense),us-gaap,񎋁,Apple Inc.
+NontradeReceivablesCurrent,"Nontrade Receivables, Current",us-gaap,񎋁,Apple Inc.
+NotionalAmountOfForeignCurrencyDerivativeInstrumentsNotDesignatedAsHedgingInstruments,Notional Amount of Foreign Currency Derivative Instruments Not Designated as Hedging Instruments (Deprecated 2013-01-31),us-gaap,񎋁,Apple Inc.
+NumberOfStores,Number of Stores,us-gaap,񎋁,Apple Inc.
+OciBeforeReclassificationsBeforeTaxAttributableToParent,"OCI, before Reclassifications, before Tax, Attributable to Parent",us-gaap,񎋁,Apple Inc.
+OperatingExpenses,Operating Expenses,us-gaap,񎋁,Apple Inc.
+OperatingIncomeLoss,Operating Income (Loss),us-gaap,񎋁,Apple Inc.
+OperatingLeaseCost,"Operating Lease, Cost",us-gaap,񎋁,Apple Inc.
+OperatingLeaseLiability,"Operating Lease, Liability",us-gaap,񎋁,Apple Inc.
+OperatingLeaseLiabilityCurrent,"Operating Lease, Liability, Current",us-gaap,񎋁,Apple Inc.
+OperatingLeaseLiabilityNoncurrent,"Operating Lease, Liability, Noncurrent",us-gaap,񎋁,Apple Inc.
+OperatingLeasePayments,"Operating Lease, Payments",us-gaap,񎋁,Apple Inc.
+OperatingLeaseRightOfUseAsset,"Operating Lease, Right-of-Use Asset",us-gaap,񎋁,Apple Inc.
+OperatingLeasesFutureMinimumPaymentsDue,"Operating Leases, Future Minimum Payments Due",us-gaap,񎋁,Apple Inc.
+OperatingLeasesFutureMinimumPaymentsDueCurrent,"Operating Leases, Future Minimum Payments Due, Next Twelve Months",us-gaap,񎋁,Apple Inc.
+OperatingLeasesFutureMinimumPaymentsDueInFiveYears,"Operating Leases, Future Minimum Payments, Due in Five Years",us-gaap,񎋁,Apple Inc.
+OperatingLeasesFutureMinimumPaymentsDueInFourYears,"Operating Leases, Future Minimum Payments, Due in Four Years",us-gaap,񎋁,Apple Inc.
+OperatingLeasesFutureMinimumPaymentsDueInThreeYears,"Operating Leases, Future Minimum Payments, Due in Three Years",us-gaap,񎋁,Apple Inc.
+OperatingLeasesFutureMinimumPaymentsDueInTwoYears,"Operating Leases, Future Minimum Payments, Due in Two Years",us-gaap,񎋁,Apple Inc.
+OperatingLeasesFutureMinimumPaymentsDueThereafter,"Operating Leases, Future Minimum Payments, Due Thereafter",us-gaap,񎋁,Apple Inc.
+OperatingLeasesRentExpenseNet,"Operating Leases, Rent Expense, Net",us-gaap,񎋁,Apple Inc.
+OtherAccruedLiabilitiesCurrent,"Other Accrued Liabilities, Current",us-gaap,񎋁,Apple Inc.
+OtherAccruedLiabilitiesNoncurrent,"Other Accrued Liabilities, Noncurrent",us-gaap,񎋁,Apple Inc.
+OtherAssetsCurrent,"Other Assets, Current",us-gaap,񎋁,Apple Inc.
+OtherAssetsMiscellaneousNoncurrent,"Other Assets, Miscellaneous, Noncurrent",us-gaap,񎋁,Apple Inc.
+OtherAssetsNoncurrent,"Other Assets, Noncurrent",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeAvailableForSaleSecuritiesAdjustmentNetOfTaxPeriodIncreaseDecrease,"Other Comprehensive Income (Loss), Available-for-sale Securities Adjustment, Net of Tax (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeDerivativesQualifyingAsHedgesNetOfTaxPeriodIncreaseDecrease,"Other Comprehensive Income (Loss), Derivatives Qualifying as Hedges, Net of Tax (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeForeignCurrencyTransactionAndTranslationAdjustmentNetOfTaxPeriodIncreaseDecrease,"Other Comprehensive Income (Loss), Foreign Currency Transaction and Translation Adjustment, Net of Tax (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossAvailableForSaleSecuritiesAdjustmentNetOfTax,"OCI, Debt Securities, Available-for-Sale, Gain (Loss), after Adjustment and Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossBeforeReclassificationsBeforeTax,"Other Comprehensive Income (Loss), before Reclassifications, before Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossBeforeReclassificationsNetOfTax,"Other Comprehensive Income (Loss), before Reclassifications, Net of Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossCashFlowHedgeGainLossAfterReclassificationAndTax,"Other Comprehensive Income (Loss), Cash Flow Hedge, Gain (Loss), after Reclassification and Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossCashFlowHedgeGainLossBeforeReclassificationAfterTax,"Other Comprehensive Income (Loss), Cash Flow Hedge, Gain (Loss), before Reclassification, after Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossCashFlowHedgeGainLossBeforeReclassificationAndTax,"Other Comprehensive Income (Loss), Cash Flow Hedge, Gain (Loss), before Reclassification and Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossCashFlowHedgeGainLossReclassificationAfterTax,"Other Comprehensive Income (Loss), Cash Flow Hedge, Gain (Loss), Reclassification, after Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossCashFlowHedgeGainLossReclassificationBeforeTax,"Other Comprehensive Income (Loss), Cash Flow Hedge, Gain (Loss), Reclassification, before Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossDerivativeExcludedComponentIncreaseDecreaseBeforeAdjustmentsAndTax,"Other Comprehensive Income (Loss), Derivative, Excluded Component, Increase (Decrease), before Adjustments and Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossDerivativesQualifyingAsHedgesNetOfTax,"Other Comprehensive Income (Loss), Derivatives Qualifying as Hedges, Net of Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossForeignCurrencyTransactionAndTranslationAdjustmentNetOfTax,"Other Comprehensive Income (Loss), Foreign Currency Transaction and Translation Adjustment, Net of Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossForeignCurrencyTranslationAdjustmentTax,"Other Comprehensive Income (Loss), Foreign Currency Translation Adjustment, Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossNetOfTax,"Other Comprehensive Income (Loss), Net of Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossNetOfTaxPortionAttributableToParent,"Other Comprehensive Income (Loss), Net of Tax, Portion Attributable to Parent",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentForSaleOfSecuritiesIncludedInNetIncomeNetOfTax,"Other Comprehensive Income (Loss), Reclassification Adjustment for Sale of Securities Included in Net Income, Net of Tax (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentFromAOCIForSaleOfSecuritiesBeforeTax,"Other Comprehensive Income (Loss), Reclassification Adjustment from AOCI for Sale of Securities, before Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentFromAOCIForSaleOfSecuritiesNetOfTax,"Other Comprehensive Income (Loss), Reclassification Adjustment from AOCI for Sale of Securities, Net of Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentFromAOCIForSaleOfSecuritiesTax,"Other Comprehensive Income (Loss), Reclassification Adjustment from AOCI for Sale of Securities, Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentFromAOCIOnDerivativesBeforeTax,"Other Comprehensive Income (Loss), Reclassification Adjustment from AOCI on Derivatives, before Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentFromAOCIOnDerivativesNetOfTax,"Other Comprehensive Income (Loss), Reclassification Adjustment from AOCI on Derivatives, Net of Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentFromAOCIOnDerivativesTax,"Other Comprehensive Income (Loss), Reclassification Adjustment from AOCI on Derivatives, Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentOnDerivativesIncludedInNetIncomeNetOfTax,"Other Comprehensive Income (Loss), Reclassification Adjustment on Derivatives Included in Net Income, Net of Tax (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossReclassificationAdjustmentOnDerivativesIncludedInNetIncomeTax,"Other Comprehensive Income (Loss), Reclassification Adjustment on Derivatives Included in Net Income, Tax (Deprecated 2013-01-31)",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossTax,"Other Comprehensive Income (Loss), Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeLossTaxPortionAttributableToParent1,"Other Comprehensive Income (Loss), Tax, Portion Attributable to Parent",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeReclassificationAdjustmentOnDerivativesIncludedInNetIncomeNetOfTax,"Other Comprehensive Income (Loss), Reclassification Adjustment on Derivatives Included in Net Income, Net of Tax (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeReclassificationAdjustmentOnDerivativesIncludedInNetIncomeTax,"Other Comprehensive Income (Loss), Reclassification Adjustment on Derivatives Included in Net Income, Tax (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeUnrealizedGainLossOnDerivativesArisingDuringPeriodNetOfTax,"Other Comprehensive Income (Loss), Unrealized Gain (Loss) on Derivatives Arising During Period, Net of Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeUnrealizedGainLossOnDerivativesArisingDuringPeriodTax,"Other Comprehensive Income (Loss), Unrealized Gain (Loss) on Derivatives Arising During Period, Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeUnrealizedHoldingGainLossOnSecuritiesArisingDuringPeriodNetOfTax,"OCI, Debt Securities, Available-for-Sale, Unrealized Holding Gain (Loss), before Adjustment, after Tax",us-gaap,񎋁,Apple Inc.
+OtherComprehensiveIncomeUnrealizedHoldingGainLossOnSecuritiesArisingDuringPeriodTax,"OCI, Debt Securities, Available-for-Sale, Unrealized Holding Gain (Loss), before Adjustment, Tax",us-gaap,񎋁,Apple Inc.
+OtherDeferredCreditsCurrent,"Other Deferred Credits, Current",us-gaap,񎋁,Apple Inc.
+OtherLiabilitiesCurrent,"Other Liabilities, Current",us-gaap,񎋁,Apple Inc.
+OtherLiabilitiesNoncurrent,"Other Liabilities, Noncurrent",us-gaap,񎋁,Apple Inc.
+OtherNoncashIncomeExpense,Other Noncash Income (Expense),us-gaap,񎋁,Apple Inc.
+OtherNonoperatingIncomeExpense,Other Nonoperating Income (Expense),us-gaap,񎋁,Apple Inc.
+OtherPrepaidExpenseCurrent,"Other Prepaid Expense, Current",us-gaap,񎋁,Apple Inc.
+OtherShortTermBorrowings,Other Short-term Borrowings,us-gaap,񎋁,Apple Inc.
+PaymentsForProceedsFromOtherInvestingActivities,Payments for (Proceeds from) Other Investing Activities,us-gaap,񎋁,Apple Inc.
+PaymentsForRepurchaseOfCommonStock,Payments for Repurchase of Common Stock,us-gaap,񎋁,Apple Inc.
+PaymentsOfDividends,Payments of Dividends,us-gaap,񎋁,Apple Inc.
+PaymentsOfDividendsCommonStock,"Payments of Ordinary Dividends, Common Stock",us-gaap,񎋁,Apple Inc.
+PaymentsRelatedToTaxWithholdingForShareBasedCompensation,"Payment, Tax Withholding, Share-based Payment Arrangement",us-gaap,񎋁,Apple Inc.
+PaymentsToAcquireAvailableForSaleSecurities,Payments to Acquire Available-for-sale Securities,us-gaap,񎋁,Apple Inc.
+PaymentsToAcquireAvailableForSaleSecuritiesDebt,"Payments to Acquire Debt Securities, Available-for-sale",us-gaap,񎋁,Apple Inc.
+PaymentsToAcquireBusinessesNetOfCashAcquired,"Payments to Acquire Businesses, Net of Cash Acquired",us-gaap,񎋁,Apple Inc.
+PaymentsToAcquireIntangibleAssets,Payments to Acquire Intangible Assets,us-gaap,񎋁,Apple Inc.
+PaymentsToAcquireOtherInvestments,Payments to Acquire Other Investments,us-gaap,񎋁,Apple Inc.
+PaymentsToAcquireProductiveAssets,Payments to Acquire Productive Assets,us-gaap,񎋁,Apple Inc.
+PaymentsToAcquirePropertyPlantAndEquipment,"Payments to Acquire Property, Plant, and Equipment",us-gaap,񎋁,Apple Inc.
+PreferredStockSharesAuthorized,"Preferred Stock, Shares Authorized",us-gaap,񎋁,Apple Inc.
+PrepaidExpenseOtherNoncurrent,"Prepaid Expense Other, Noncurrent",us-gaap,񎋁,Apple Inc.
+ProceedsFromIssuanceOfCommonStock,Proceeds from Issuance of Common Stock,us-gaap,񎋁,Apple Inc.
+ProceedsFromIssuanceOfLongTermDebt,Proceeds from Issuance of Long-term Debt,us-gaap,񎋁,Apple Inc.
+ProceedsFromMaturitiesPrepaymentsAndCallsOfAvailableForSaleSecurities,"Proceeds from Maturities, Prepayments and Calls of Debt Securities, Available-for-sale",us-gaap,񎋁,Apple Inc.
+ProceedsFromOtherShortTermDebt,Proceeds from Other Short-term Debt,us-gaap,񎋁,Apple Inc.
+ProceedsFromPaymentsForOtherFinancingActivities,Proceeds from (Payments for) Other Financing Activities,us-gaap,񎋁,Apple Inc.
+ProceedsFromRepaymentsOfCommercialPaper,Proceeds from (Repayments of) Commercial Paper,us-gaap,񎋁,Apple Inc.
+ProceedsFromRepaymentsOfShortTermDebt,Proceeds from (Repayments of) Short-term Debt,us-gaap,񎋁,Apple Inc.
+ProceedsFromRepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths,"Proceeds from (Repayments of) Short-term Debt, Maturing in More than Three Months",us-gaap,񎋁,Apple Inc.
+ProceedsFromRepaymentsOfShortTermDebtMaturingInThreeMonthsOrLess,"Proceeds from (Repayments of) Short-term Debt, Maturing in Three Months or Less",us-gaap,񎋁,Apple Inc.
+ProceedsFromSaleAndMaturityOfOtherInvestments,Proceeds from Sale and Maturity of Other Investments,us-gaap,񎋁,Apple Inc.
+ProceedsFromSaleOfAvailableForSaleSecurities,Proceeds from Sale of Available-for-sale Securities,us-gaap,񎋁,Apple Inc.
+ProceedsFromSaleOfAvailableForSaleSecuritiesDebt,"Proceeds from Sale of Debt Securities, Available-for-sale",us-gaap,񎋁,Apple Inc.
+ProceedsFromShortTermDebtMaturingInMoreThanThreeMonths,"Proceeds from Short-term Debt, Maturing in More than Three Months",us-gaap,񎋁,Apple Inc.
+ProductWarrantyAccrualClassifiedCurrent,"Product Warranty Accrual, Current",us-gaap,񎋁,Apple Inc.
+ProductWarrantyAccrualPayments,"Standard and Extended Product Warranty Accrual, Decrease for Payments",us-gaap,񎋁,Apple Inc.
+ProductWarrantyAccrualWarrantiesIssued,"Standard and Extended Product Warranty Accrual, Increase for Warranties Issued",us-gaap,񎋁,Apple Inc.
+ProductWarrantyExpense,Product Warranty Expense,us-gaap,񎋁,Apple Inc.
+PropertyPlantAndEquipmentGross,"Property, Plant and Equipment, Gross",us-gaap,񎋁,Apple Inc.
+PropertyPlantAndEquipmentNet,"Property, Plant and Equipment, Net",us-gaap,񎋁,Apple Inc.
+ReclassificationFromAccumulatedOtherComprehensiveIncomeCurrentPeriodBeforeTax,"Reclassification from Accumulated Other Comprehensive Income, Current Period, before Tax",us-gaap,񎋁,Apple Inc.
+ReclassificationFromAccumulatedOtherComprehensiveIncomeCurrentPeriodNetOfTax,"Reclassification from Accumulated Other Comprehensive Income, Current Period, Net of Tax",us-gaap,񎋁,Apple Inc.
+ReclassificationFromAociCurrentPeriodBeforeTaxAttributableToParent,"Reclassification from AOCI, Current Period, before Tax, Attributable to Parent",us-gaap,񎋁,Apple Inc.
+RepaymentsOfLongTermDebt,Repayments of Long-term Debt,us-gaap,񎋁,Apple Inc.
+RepaymentsOfOtherShortTermDebt,Repayments of Other Short-term Debt,us-gaap,񎋁,Apple Inc.
+RepaymentsOfShortTermDebtMaturingInMoreThanThreeMonths,"Repayments of Short-term Debt, Maturing in More than Three Months",us-gaap,񎋁,Apple Inc.
+ResearchAndDevelopmentExpense,Research and Development Expense,us-gaap,񎋁,Apple Inc.
+RestrictedCash,Restricted Cash,us-gaap,񎋁,Apple Inc.
+RestrictedCashAndCashEquivalentsAtCarryingValue,"Restricted Cash and Cash Equivalents, Current",us-gaap,񎋁,Apple Inc.
+RestrictedCashAndCashEquivalentsNoncurrent,"Restricted Cash and Cash Equivalents, Noncurrent",us-gaap,񎋁,Apple Inc.
+RestrictedInvestments,Restricted Investments,us-gaap,񎋁,Apple Inc.
+RetainedEarningsAccumulatedDeficit,Retained Earnings (Accumulated Deficit),us-gaap,񎋁,Apple Inc.
+RevenueFromContractWithCustomerExcludingAssessedTax,"Revenue from Contract with Customer, Excluding Assessed Tax",us-gaap,񎋁,Apple Inc.
+Revenues,Revenues,us-gaap,񎋁,Apple Inc.
+SalesRevenueNet,"Revenue, Net (Deprecated 2018-01-31)",us-gaap,񎋁,Apple Inc.
+SalesRevenueServicesGross,"Sales Revenue, Services, Other (Deprecated 2018-01-31)",us-gaap,񎋁,Apple Inc.
+SecuritiesSoldUnderAgreementsToRepurchaseFairValueOfCollateral,"Securities Sold under Agreements to Repurchase, Fair Value of Collateral",us-gaap,񎋁,Apple Inc.
+SegmentReportingInformationOperatingIncomeLoss,"Segment Reporting Information, Operating Income (Loss) (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+SegmentReportingReconcilingItemsAssets,"Segment Reporting, Reconciling Items, Assets (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+SegmentReportingSegmentAssets,"Segment Reporting, Segment Assets (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+SellingAndMarketingExpense,Selling and Marketing Expense,us-gaap,񎋁,Apple Inc.
+SellingGeneralAndAdministrativeExpense,"Selling, General and Administrative Expense",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensation,"Share-based Payment Arrangement, Noncash Expense",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeitedInPeriod,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Forfeited in Period",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeitedInPeriodWeightedAverageGrantDateFairValue,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Forfeited in Period, Weighted Average Grant Date Fair Value (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeituresWeightedAverageGrantDateFairValue,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Forfeitures, Weighted Average Grant Date Fair Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriod,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Grants in Period",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodWeightedAverageGrantDateFairValue,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Grants in Period, Weighted Average Grant Date Fair Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedIntrinsicValue,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instrument Other than Option, Nonvested, Intrinsic Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Nonvested, Number",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValue,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Nonvested, Weighted Average Grant Date Fair Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriod,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Vested in Period",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodTotalFairValue,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Vested in Period, Fair Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodWeightedAverageGrantDateFairValue,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Vested in Period, Weighted Average Grant Date Fair Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedDividendRate,"Share-based Compensation Arrangement by Share-based Payment Award, Fair Value Assumptions, Expected Dividend Rate",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsExpectedTerm,"Share-based Compensation Arrangement by Share-based Payment Award, Fair Value Assumptions, Expected Term (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsRiskFreeInterestRate,"Share-based Compensation Arrangement by Share-based Payment Award, Fair Value Assumptions, Risk Free Interest Rate",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsWeightedAverageVolatilityRate,"Share-based Compensation Arrangement by Share-based Payment Award, Fair Value Assumptions, Weighted Average Volatility Rate",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfSharesAvailableForGrant,"Share-based Compensation Arrangement by Share-based Payment Award, Number of Shares Available for Grant",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableIntrinsicValue,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercisable, Intrinsic Value (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableNumber,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercisable, Number",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableWeightedAverageExercisePrice,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercisable, Weighted Average Exercise Price",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisableWeightedAverageRemainingContractualTerm,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercisable, Weighted Average Remaining Contractual Term (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriod,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercises in Period (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriodTotalIntrinsicValue,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercises in Period, Intrinsic Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriodWeightedAverageExercisePrice,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercises in Period, Weighted Average Exercise Price (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsForfeituresInPeriod,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Forfeitures in Period",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsForfeituresInPeriodWeightedAverageExercisePrice,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Forfeitures in Period, Weighted Average Exercise Price (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriod,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Grants in Period, Net of Forfeitures",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriodWeightedAverageExercisePrice,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Grants in Period, Weighted Average Exercise Price (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsGrantsInPeriodWeightedAverageGrantDateFairValue,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Grants in Period, Weighted Average Grant Date Fair Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOtherIncreasesDecreasesInPeriod,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Other Increases (Decreases) in Period",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingIntrinsicValue,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Outstanding, Intrinsic Value",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingNumber,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Outstanding, Number",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingWeightedAverageExercisePrice,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Outstanding, Weighted Average Exercise Price",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsOutstandingWeightedAverageRemainingContractualTerm,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Outstanding, Weighted Average Remaining Contractual Term (Deprecated 2011-01-31)",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsVestedAndExpectedToVestOutstandingNumber,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Vested and Expected to Vest, Outstanding, Number",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsExercisesInPeriodWeightedAverageExercisePrice,"Share-based Compensation Arrangements by Share-based Payment Award, Options, Exercises in Period, Weighted Average Exercise Price",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsForfeituresInPeriodWeightedAverageExercisePrice,"Share-based Compensation Arrangements by Share-based Payment Award, Options, Forfeitures in Period, Weighted Average Exercise Price",us-gaap,񎋁,Apple Inc.
+ShareBasedCompensationArrangementsByShareBasedPaymentAwardOptionsGrantsInPeriodWeightedAverageExercisePrice,"Share-based Compensation Arrangements by Share-based Payment Award, Options, Grants in Period, Weighted Average Exercise Price",us-gaap,񎋁,Apple Inc.
+SharebasedCompensationArrangementBySharebasedPaymentAwardEquityInstrumentsOtherThanOptionsAggregateIntrinsicValueNonvested,"Share-based Compensation Arrangement by Share-based Payment Award, Equity Instruments Other than Options, Aggregate Intrinsic Value, Nonvested",us-gaap,񎋁,Apple Inc.
+SharebasedCompensationArrangementBySharebasedPaymentAwardOptionsExercisableIntrinsicValue1,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercisable, Intrinsic Value",us-gaap,񎋁,Apple Inc.
+SharebasedCompensationArrangementBySharebasedPaymentAwardOptionsOutstandingWeightedAverageRemainingContractualTerm1,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Outstanding, Weighted Average Remaining Contractual Term (Deprecated 2012-01-31)",us-gaap,񎋁,Apple Inc.
+SharesPaidForTaxWithholdingForShareBasedCompensation,"Share-based Payment Arrangement, Shares Withheld for Tax Withholding Obligation",us-gaap,񎋁,Apple Inc.
+ShortTermDebtWeightedAverageInterestRate,"Short-term Debt, Weighted Average Interest Rate, at Point in Time",us-gaap,񎋁,Apple Inc.
+SignificantChangeInUnrecognizedTaxBenefitsIsReasonablyPossibleEstimatedRangeOfChangeLowerBound,"Significant (Increase) Decrease in Unrecognized Tax Benefits is Reasonably Possible, Estimated Range of Change, Lower Bound (Deprecated 2015-01-31)",us-gaap,񎋁,Apple Inc.
+SignificantChangeInUnrecognizedTaxBenefitsIsReasonablyPossibleEstimatedRangeOfChangeUpperBound,"Significant (Increase) Decrease in Unrecognized Tax Benefits is Reasonably Possible, Estimated Range of Change, Upper Bound (Deprecated 2015-01-31)",us-gaap,񎋁,Apple Inc.
+StandardProductWarrantyAccrual,Standard Product Warranty Accrual,us-gaap,񎋁,Apple Inc.
+StandardProductWarrantyAccrualPayments,"Standard Product Warranty Accrual, Decrease for Payments",us-gaap,񎋁,Apple Inc.
+StandardProductWarrantyAccrualWarrantiesIssued,"Standard Product Warranty Accrual, Increase for Warranties Issued",us-gaap,񎋁,Apple Inc.
+StateAndLocalIncomeTaxExpenseBenefitContinuingOperations,"State and Local Income Tax Expense (Benefit), Continuing Operations",us-gaap,񎋁,Apple Inc.
+StockIssuedDuringPeriodSharesStockOptionsExercised,"Share-based Compensation Arrangement by Share-based Payment Award, Options, Exercises in Period",us-gaap,񎋁,Apple Inc.
+StockIssuedDuringPeriodValueAcquisitions,"Stock Issued During Period, Value, Acquisitions",us-gaap,񎋁,Apple Inc.
+StockIssuedDuringPeriodValueShareBasedCompensation,"Shares Issued, Value, Share-based Payment Arrangement, after Forfeiture",us-gaap,񎋁,Apple Inc.
+StockRepurchaseProgramAuthorizedAmount,"Stock Repurchase Program, Authorized Amount (Deprecated 2014-01-31)",us-gaap,񎋁,Apple Inc.
+StockRepurchaseProgramAuthorizedAmount1,"Stock Repurchase Program, Authorized Amount",us-gaap,񎋁,Apple Inc.
+StockRepurchasedAndRetiredDuringPeriodShares,"Stock Repurchased and Retired During Period, Shares",us-gaap,񎋁,Apple Inc.
+StockRepurchasedAndRetiredDuringPeriodValue,"Stock Repurchased and Retired During Period, Value",us-gaap,񎋁,Apple Inc.
+StockholdersEquity,Stockholders' Equity Attributable to Parent,us-gaap,񎋁,Apple Inc.
+StockholdersEquityNoteStockSplitConversionRatio1,"Stockholders' Equity Note, Stock Split, Conversion Ratio",us-gaap,񎋁,Apple Inc.
+TaxAdjustmentsSettlementsAndUnusualProvisions,"Tax Adjustments, Settlements, and Unusual Provisions",us-gaap,񎋁,Apple Inc.
+TaxesPayableCurrent,"Taxes Payable, Current",us-gaap,񎋁,Apple Inc.
+TranslationAdjustmentForNetInvestmentHedgeNetOfTax,"Derivatives used in Net Investment Hedge, Net of Tax",us-gaap,񎋁,Apple Inc.
+TreasuryStockValueAcquiredCostMethod,"Treasury Stock, Value, Acquired, Cost Method",us-gaap,񎋁,Apple Inc.
+UndistributedEarningsOfForeignSubsidiaries,Undistributed Earnings of Foreign Subsidiaries,us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefits,Unrecognized Tax Benefits,us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsDecreasesResultingFromPriorPeriodTaxPositions,"Unrecognized Tax Benefits, Decrease Resulting from Prior Period Tax Positions",us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsDecreasesResultingFromSettlementsWithTaxingAuthorities,"Unrecognized Tax Benefits, Decrease Resulting from Settlements with Taxing Authorities",us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestAccrued,"Unrecognized Tax Benefits, Income Tax Penalties and Interest Accrued",us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsIncomeTaxPenaltiesAndInterestExpense,"Unrecognized Tax Benefits, Income Tax Penalties and Interest Expense",us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsIncreasesResultingFromCurrentPeriodTaxPositions,"Unrecognized Tax Benefits, Increase Resulting from Current Period Tax Positions",us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsIncreasesResultingFromPriorPeriodTaxPositions,"Unrecognized Tax Benefits, Increase Resulting from Prior Period Tax Positions",us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsPeriodIncreaseDecrease,"Unrecognized Tax Benefits, Period Increase (Decrease)",us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsReductionsResultingFromLapseOfApplicableStatuteOfLimitations,"Unrecognized Tax Benefits, Reduction Resulting from Lapse of Applicable Statute of Limitations",us-gaap,񎋁,Apple Inc.
+UnrecognizedTaxBenefitsThatWouldImpactEffectiveTaxRate,Unrecognized Tax Benefits that Would Impact Effective Tax Rate,us-gaap,񎋁,Apple Inc.
+UnrecordedUnconditionalPurchaseObligationBalanceOnFifthAnniversary,"Unrecorded Unconditional Purchase Obligation, to be Paid, Year Five",us-gaap,񎋁,Apple Inc.
+UnrecordedUnconditionalPurchaseObligationBalanceOnFirstAnniversary,"Unrecorded Unconditional Purchase Obligation, to be Paid, Year One",us-gaap,񎋁,Apple Inc.
+UnrecordedUnconditionalPurchaseObligationBalanceOnFourthAnniversary,"Unrecorded Unconditional Purchase Obligation, to be Paid, Year Four",us-gaap,񎋁,Apple Inc.
+UnrecordedUnconditionalPurchaseObligationBalanceOnSecondAnniversary,"Unrecorded Unconditional Purchase Obligation, to be Paid, Year Two",us-gaap,񎋁,Apple Inc.
+UnrecordedUnconditionalPurchaseObligationBalanceOnThirdAnniversary,"Unrecorded Unconditional Purchase Obligation, to be Paid, Year Three",us-gaap,񎋁,Apple Inc.
+UnrecordedUnconditionalPurchaseObligationBalanceSheetAmount,Unrecorded Unconditional Purchase Obligation,us-gaap,񎋁,Apple Inc.
+UnrecordedUnconditionalPurchaseObligationDueAfterFiveYears,"Unrecorded Unconditional Purchase Obligation, to be Paid, after Year Five",us-gaap,񎋁,Apple Inc.
+UnrecordedUnconditionalPurchaseObligationDueInRemainderOfFiscalYear,"Unrecorded Unconditional Purchase Obligation, to be Paid, Remainder of Fiscal Year",us-gaap,񎋁,Apple Inc.
+VariableLeaseCost,"Variable Lease, Cost",us-gaap,񎋁,Apple Inc.
+WeightedAverageNumberDilutedSharesOutstandingAdjustment,Weighted Average Number Diluted Shares Outstanding Adjustment,us-gaap,񎋁,Apple Inc.
+WeightedAverageNumberOfDilutedSharesOutstanding,"Weighted Average Number of Shares Outstanding, Diluted",us-gaap,񎋁,Apple Inc.
+WeightedAverageNumberOfSharesOutstandingBasic,"Weighted Average Number of Shares Outstanding, Basic",us-gaap,񎋁,Apple Inc.
