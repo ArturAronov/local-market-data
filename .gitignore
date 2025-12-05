@@ -1,4 +1,4 @@
 _data/*
 !_data/.gitkeep
-
+/test-data/
 .DS_Store
