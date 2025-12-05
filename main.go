@@ -6,6 +6,7 @@ import (
 	"log"
 
 	// company_facts "market-data/src/company-facts"
+	company_facts "market-data/src/company-facts"
 	"market-data/utils"
 	"os"
 	"os/signal"
@@ -60,6 +61,8 @@ func main() {
 
 	defer userDb.Close()
 	defer marketDb.Close()
+
+	company_facts.GetCompanyFacts()
 
 	// data := company_facts.GetCompanyFacts(320193)
 

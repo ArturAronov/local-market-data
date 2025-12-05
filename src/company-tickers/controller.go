@@ -8,15 +8,7 @@ import (
 	"net/http"
 )
 
-type secEntry struct {
-	CIKStr int64  `json:"cik_str"`
-	Ticker string `json:"ticker"`
-	Title  string `json:"title"`
-}
-
-type secResponse map[string]secEntry
-
-func GetCompanyTickersC(email string) (int, *secResponse, error) {
+func GetCompanyTickersC(email string) (int, *SecResponse, error) {
 	client := &http.Client{}
 	url := "https://www.sec.gov/files/company_tickers.json"
 
@@ -49,7 +41,7 @@ func GetCompanyTickersC(email string) (int, *secResponse, error) {
 		return res.StatusCode, nil, err
 	}
 
-	var secRes secResponse
+	var secRes SecResponse
 	if res.StatusCode < 300 {
 		jsonErr := json.Unmarshal(body, &secRes)
 		if jsonErr != nil {

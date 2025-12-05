@@ -1,108 +1,112 @@
 package company_facts
 
-var naughtyObj = map[string]any{
-	"cik":  "123",
-	"name": "pear",
-	"float": map[string]any{
-		"float_key1": "float_value1",
-		"float_key2": "float_value2",
-		"float_key3": map[string]any{
-			"float_nested_key1": "float_nested_value1",
-			"float_nested_key2": "float_nested_value2",
-			"float_nested_key3": []string{
-				"float_nested_value3_1",
-				"float_nested_value3_2",
-				"float_nested_value3_3",
-			},
-			"float_nested_key4": []map[string]any{
-				{
-					"float_super_nested_1_key1": "float_super_nested_1_value1",
-					"float_super_nested_1_key2": "float_super_nested_1_value2",
-					"float_super_nested_1_key3": "float_super_nested_1_value3",
-					"float_super_nested_1_key4": "float_super_nested_1_value4",
-				},
-				{
-					"float_super_nested_2_key1": "float_super_nested_2_value1",
-					"float_super_nested_2_key2": "float_super_nested_2_value2",
-					"float_super_nested_2_key3": "float_super_nested_2_value3",
-					"float_super_nested_2_key4": "float_super_nested_2_value4",
-				},
-			},
-		},
-	},
-	"data": map[string]any{
-		"data_key1": "data_value1",
-		"data_key2": "data_value2",
-		"data_key3": map[string]any{
-			"data_nested_key1": "data_nested_value1",
-			"data_nested_key2": "data_nested_value2",
-			"data_nested_key3": []string{
-				"data_nested_value3_1",
-				"data_nested_value3_2",
-				"data_nested_value3_3",
-			},
-			"data_nested_key4": []map[string]any{
-				{
-					"data_super_nested_1_key1": "data_super_nested_1_value1",
-					"data_super_nested_1_key2": "data_super_nested_1_value2",
-					"data_super_nested_1_key3": "data_super_nested_1_value3",
-					"data_super_nested_1_key4": "data_super_nested_1_value4",
-				},
-				{
-					"data_super_nested_2_key1": "data_super_nested_2_value1",
-					"data_super_nested_2_key2": "data_super_nested_2_value2",
-					"data_super_nested_2_key3": "data_super_nested_2_value3",
-					"data_super_nested_2_key4": []map[string]any{
-						{
-							"data_giga_nested_1_key1": "data_giga_nested_1_value1",
-							"data_giga_nested_1_key2": "data_giga_nested_1_value2",
-							"data_giga_nested_1_key3": "data_giga_nested_1_value3",
-							"data_giga_nested_1_key4": "data_giga_nested_1_value4",
-						},
-						{
-							"data_giga_nested_2_key1": "data_giga_nested_2_value1",
-							"data_giga_nested_2_key2": "data_giga_nested_2_value2",
-							"data_giga_nested_2_key3": "data_giga_nested_2_value3",
-							"data_giga_nested_2_key4": "data_giga_nested_2_value4",
-						},
-						{
-							"data_giga_nested_3_key1": "data_giga_nested_3_value1",
-							"data_giga_nested_3_key2": "data_giga_nested_3_value2",
-							"data_giga_nested_3_key3": "data_giga_nested_3_value3",
-							"data_giga_nested_3_key4": "data_giga_nested_3_value4",
-						},
-					},
-				},
-			},
-		},
-	},
-	"funkey": []map[string]any{
-		{
-			"funkey_1_key1": "funkey_1_value1",
-			"funkey_1_key2": "funkey_1_value2",
-			"funkey_1_key3": "funkey_1_value3",
-			"funkey_1_key4": "funkey_1_value4",
-		},
-		{
-			"funkey_2_key1": "funkey_2_value1",
-			"funkey_2_key2": "funkey_2_value2",
-			"funkey_2_key3": "funkey_2_value3",
-			"funkey_2_key4": "funkey_2_value4",
-		},
-		{
-			"funkey_3_key1": "funkey_3_value1",
-			"funkey_3_key2": "funkey_3_value2",
-			"funkey_3_key3": "funkey_3_value3",
-			"funkey_3_key4": "funkey_3_value4",
-		},
-	},
+import (
+	"encoding/json"
+	"fmt"
+	"io"
+	"log"
+	company_ticker "market-data/src/company-tickers"
+	"market-data/src/user"
+	"net/http"
+	"os"
+	"path/filepath"
+	"time"
+)
+
+type SecEntry struct {
+	CIKStr int64  `json:"cik_str"`
+	Ticker string `json:"ticker"`
+	Title  string `json:"title"`
 }
 
-// func flattenObj(obj json.RawMessage, parentKey *string, keyTrace []string) {
-func flattenObj(obj map[string]any, parentKey *string, keyTrace []string) {
-
+func zeroPadCIK(cik int64) string {
+	return fmt.Sprintf("%010d", cik)
 }
 
 func GetCompanyFacts() {
-	flattenObj(naughtyObj, nil, nil)
+	// Get contact email for SEC User-Agent policy
+	email, err := user.GetUserEmail()
+	if err != nil {
+		log.Fatalf("[GetCompanyFacts] get user email: %v", err)
+	}
+
+	// Load tickers/CIKs
+	entries, err := company_ticker.GetTickerInfoR()
+	if err != nil {
+		log.Fatalf("[GetCompanyFacts] get tickers: %v", err)
+	}
+
+	// Prepare output directory
+	outDir := "test-data"
+	if mkErr := os.MkdirAll(outDir, 0o755); mkErr != nil {
+		log.Fatalf("[GetCompanyFacts] mkdir %s: %v", outDir, mkErr)
+	}
+
+	// Optional: throttle a bit to be nice to SEC
+	const sleepBetween = 5 * time.Second
+
+	client := &http.Client{
+		Timeout: sleepBetween,
+	}
+
+	for _, e := range entries {
+		if e.CIKStr == 0 {
+			continue
+		}
+
+		cik10 := zeroPadCIK(e.CIKStr)
+		url := fmt.Sprintf("https://data.sec.gov/api/xbrl/companyfacts/CIK%s.json", cik10)
+
+		req, reqErr := http.NewRequest("GET", url, nil)
+		if reqErr != nil {
+			log.Printf("[GetCompanyFacts] new request CIK %s: %v", cik10, reqErr)
+			continue
+		}
+
+		// SEC guidance: app name/version + contact email
+		req.Header.Set("User-Agent", fmt.Sprintf("tes-fetch/1.0 (%s)", *email))
+		req.Header.Set("Accept", "application/json")
+
+		res, doErr := client.Do(req)
+		if doErr != nil {
+			log.Printf("[GetCompanyFacts] http CIK %s: %v", cik10, doErr)
+			time.Sleep(sleepBetween)
+			continue
+		}
+
+		func() {
+			defer res.Body.Close()
+
+			if res.StatusCode != http.StatusOK {
+				// Log small body snippet for diagnostics
+				snippet, _ := io.ReadAll(io.LimitReader(res.Body, 4096))
+				log.Printf("[GetCompanyFacts] non-200 CIK %s: %s body=%s",
+					cik10, res.Status, string(snippet))
+				return
+			}
+
+			body, readErr := io.ReadAll(res.Body)
+			if readErr != nil {
+				log.Printf("[GetCompanyFacts] read body CIK %s: %v", cik10, readErr)
+				return
+			}
+
+			// Optional: validate JSON so we don’t persist HTML/error
+			var js any
+			if err := json.Unmarshal(body, &js); err != nil {
+				log.Printf("[GetCompanyFacts] invalid JSON CIK %s: %v", cik10, err)
+				return
+			}
+
+			outPath := filepath.Join(outDir, fmt.Sprintf("%s.json", cik10))
+			if writeErr := os.WriteFile(outPath, body, 0o644); writeErr != nil {
+				log.Printf("[GetCompanyFacts] write %s: %v", outPath, writeErr)
+				return
+			}
+
+			log.Printf("[GetCompanyFacts] saved %s (%s %s)", outPath, e.Ticker, e.Title)
+		}()
+
+		time.Sleep(sleepBetween)
+	}
 }
