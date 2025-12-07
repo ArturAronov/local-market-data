@@ -11,15 +11,34 @@ import (
 )
 
 const (
+	DELETE_COMPANY     = `DELETE FROM company_tickers WHERE cik = ?;`
+	SELECT_ALL         = `SELECT cik, ticker, title FROM company_tickers;`
 	INSERT_TICKER_INFO = `
 		INSERT OR IGNORE INTO company_tickers (
 			cik,
 			ticker,
 			title
 		) VALUES (?, ?, ?);`
-
-	SELECT_ALL = `SELECT cik, ticker, title FROM company_tickers;`
 )
+
+func DeleteTickerR(cik int64) error {
+	db, dbErr := sql.Open("sqlite3", "_data/company-tickers.db")
+	if dbErr != nil {
+		return fmt.Errorf("[DeleteTickerR] Failed to open database: %w", dbErr)
+	}
+
+	defer db.Close()
+	_, execErr := db.Exec(DELETE_COMPANY, cik)
+	if execErr != nil {
+		return fmt.Errorf(
+			"[DeleteTickerR] Failed to delete company from company_tickers with cik %d. %w",
+			cik,
+			execErr,
+		)
+	}
+
+	return nil
+}
 
 func GetTickerInfoR() ([]SecEntry, error) {
 	db, dbErr := sql.Open("sqlite3", "_data/company-tickers.db")
