@@ -3,7 +3,8 @@ package initcmd
 import (
 	"flag"
 	"fmt"
-	company_ticker "market-data/src/company-tickers"
+
+	company_info "market-data/src/company-info"
 	"market-data/src/user"
 )
 
@@ -21,7 +22,7 @@ func RunInit(args []string) error {
 
 	initFlags.Args()
 
-	secResponseCode, _, secResponseErr := company_ticker.GetCompanyTickersC(email)
+	secResponseCode, _, secResponseErr := company_info.GetCompanyTickersC(email)
 
 	if secResponseErr != nil {
 		return secResponseErr
