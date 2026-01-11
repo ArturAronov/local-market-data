@@ -3,7 +3,8 @@ package update
 import (
 	"flag"
 	"fmt"
-	company_ticker "market-data/src/company-tickers"
+
+	company_info "market-data/src/company-info"
 	"market-data/src/user"
 )
 
@@ -38,7 +39,7 @@ func RunUpdate(args []string) error {
 			return emailErr
 		}
 
-		company_ticker.GetCompanyTickersC(*email)
+		company_info.GetCompanyTickersC(*email)
 		// fallthrough
 	default:
 		return fmt.Errorf("Flags can't be empty")
