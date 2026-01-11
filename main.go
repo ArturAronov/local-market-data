@@ -4,7 +4,6 @@ import (
 	"context"
 	"log"
 
-	"market-data/scripts"
 	"market-data/utils"
 	"os"
 	"os/signal"
@@ -19,15 +18,12 @@ func main() {
 	}
 
 	userDb := dbs[utils.USER_EMAIL]
-	marketDb := dbs[utils.COMPANY_TICKERS]
+	marketDb := dbs[utils.COMPANY_INFO]
 
 	defer userDb.Close()
 	defer marketDb.Close()
 
-	// company_facts.GetCompanyFacts()
-	scripts.FileReader()
-
-	// utils.ParamsResover()
+	utils.ParamsResover()
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
