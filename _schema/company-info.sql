@@ -14,11 +14,11 @@ CREATE TABLE IF NOT EXISTS fact (
     description TEXT,
     unit        TEXT,
 
-    UNIQUE(fact_key, fact_type),
+    UNIQUE(fact_key, namespace),
     CHECK (namespace IN ('dei', 'ifrs-full', 'invest', 'srt', 'us-gaap', 'custom'))
 );
 
-CREATE TABLE report_data (
+CREATE TABLE IF NOT EXISTS report_data (
   id        INTEGER         PRIMARY KEY,
   cik       INTEGER         NOT NULL,
   fact_id   INTEGER         NOT NULL,
