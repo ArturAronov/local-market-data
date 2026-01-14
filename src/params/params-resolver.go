@@ -1,9 +1,9 @@
-package utils
+package params
 
 import (
 	"log"
 	initcmd "market-data/src/init"
-	"market-data/src/update"
+
 	"os"
 )
 
@@ -21,7 +21,7 @@ func ParamsResover() {
 			log.Fatalf("ParamsResover: init error %v\n%v\n", runInitErr, os.Stderr)
 		}
 	case "update":
-		runInitErr := update.RunUpdate(args[2:])
+		runInitErr := RunUpdate(args[2:])
 		if runInitErr != nil {
 			log.Fatalf("ParamsResover: init error %v\n%v\n", runInitErr, os.Stderr)
 		}
