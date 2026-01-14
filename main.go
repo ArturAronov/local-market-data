@@ -3,8 +3,9 @@ package main
 import (
 	"context"
 	"log"
+	"market-data/src/params"
+	"market-data/src/utils"
 
-	"market-data/utils"
 	"os"
 	"os/signal"
 	"syscall"
@@ -23,7 +24,7 @@ func main() {
 	defer userDb.Close()
 	defer marketDb.Close()
 
-	utils.ParamsResover()
+	params.ParamsResover()
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
