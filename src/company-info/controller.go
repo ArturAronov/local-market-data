@@ -6,10 +6,10 @@ import (
 	"market-data/src/utils"
 )
 
-func GetCompanyTickersC(email string) {
+func GetCompanyTickersC(email string) int {
 	url := "https://www.sec.gov/files/company_tickers.json"
 
-	body, bodyErr := utils.HttpReq(email, url)
+	body, res, bodyErr := utils.HttpReq(email, url)
 	if bodyErr != nil {
 		log.Fatalf("[GetCompanyTickersC] failed to handle request %v", bodyErr)
 	}
@@ -23,4 +23,5 @@ func GetCompanyTickersC(email string) {
 	InsertTickerInfoR(&secRes)
 
 	// return res.StatusCode, &secRes, nil
+	return res.StatusCode
 }

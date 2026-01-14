@@ -16,7 +16,7 @@ func GetCompanyFactsC(cik int) {
 		log.Fatalf("[GetCompanyFactsC] Error getting user email: %v\n", emailErr)
 	}
 
-	body, bodyErr := utils.HttpReq(*email, url)
+	body, _, bodyErr := utils.HttpReq(*email, url)
 	if bodyErr != nil {
 		log.Fatalf("[GetCompanyTickersC] failed to handle request %v", bodyErr)
 	}
