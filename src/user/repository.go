@@ -41,16 +41,20 @@ func GetUserEmail() (*string, error) {
 
 	db, dbErr := sql.Open("sqlite3", "_data/user-email.db")
 	if dbErr != nil {
-		return nil, fmt.Errorf("[InsertUserEmail] Failed to open database: %w", dbErr)
+		return nil, fmt.Errorf("Failed to open database: %w", dbErr)
 	}
 
 	queryErr := db.QueryRow(GET_USER_EMAIL).Scan(&email)
+
+	if email == "" {
+		return nil, fmt.Errorf("No user email set. Run 'init --email <your-email>'")
+	}
 
 	if queryErr != nil {
 		if queryErr == sql.ErrNoRows {
 			return nil, nil
 		}
-		return nil, fmt.Errorf("[GetUserEmail] Failed to get user: %w", queryErr)
+		return nil, fmt.Errorf("Failed to get user: %w", queryErr)
 	}
 
 	return &email, nil
