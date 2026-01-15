@@ -1,11 +1,9 @@
 package company_info
 
 import (
-	"context"
 	"database/sql"
 	"fmt"
 	"log"
-	"time"
 
 	_ "github.com/mattn/go-sqlite3"
 )
@@ -21,73 +19,74 @@ const (
 		) VALUES (?, ?, ?);`
 )
 
-func DeleteTickerR(cik int64) error {
-	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
-	if dbErr != nil {
-		return fmt.Errorf("[DeleteTickerR] Failed to open database: %w", dbErr)
-	}
+// TODO: need to cleanup
 
-	defer db.Close()
-	_, execErr := db.Exec(DELETE_COMPANY, cik)
-	if execErr != nil {
-		return fmt.Errorf(
-			"[DeleteTickerR] Failed to delete company from company_tickers with cik %d. %w",
-			cik,
-			execErr,
-		)
-	}
+// func DeleteTickerR(cik int64) error {
+// 	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
+// 	if dbErr != nil {
+// 		return fmt.Errorf("[DeleteTickerR] Failed to open database: %w", dbErr)
+// 	}
 
-	return nil
-}
+// 	defer db.Close()
+// 	_, execErr := db.Exec(DELETE_COMPANY, cik)
+// 	if execErr != nil {
+// 		return fmt.Errorf(
+// 			"[DeleteTickerR] Failed to delete company from company_tickers with cik %d. %w",
+// 			cik,
+// 			execErr,
+// 		)
+// 	}
 
-func GetTickerInfoR() ([]SecEntry, error) {
-	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
-	if dbErr != nil {
-		return nil, fmt.Errorf("[GetTickerInfoR] Failed to open database: %w", dbErr)
-	}
+// 	return nil
+// }
 
-	defer db.Close()
+// func GetTickerInfoR() ([]SecEntry, error) {
+// 	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
+// 	if dbErr != nil {
+// 		return nil, fmt.Errorf("[GetTickerInfoR] Failed to open database: %w", dbErr)
+// 	}
 
-	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Minute)
-	defer cancel()
+// 	defer db.Close()
 
-	rows, rowsErr := db.QueryContext(ctx, SELECT_ALL)
-	if rowsErr != nil {
-		return nil, fmt.Errorf(
-			"[GetTickerInfoR] Failed to execute query SELECT_ALL: %s \n %w",
-			SELECT_ALL,
-			rowsErr,
-		)
-	}
+// 	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Minute)
+// 	defer cancel()
 
-	defer rows.Close()
+// 	rows, rowsErr := db.QueryContext(ctx, SELECT_ALL)
+// 	if rowsErr != nil {
+// 		return nil, fmt.Errorf(
+// 			"[GetTickerInfoR] Failed to execute query SELECT_ALL: %s \n %w",
+// 			SELECT_ALL,
+// 			rowsErr,
+// 		)
+// 	}
 
-	var response []SecEntry
+// 	defer rows.Close()
 
-	for rows.Next() {
-		var _response SecEntry
-		rowErr := rows.Scan(
-			&_response.CIKStr,
-			&_response.Ticker,
-			&_response.Title,
-		)
-		if rowErr != nil {
-			return nil, fmt.Errorf("[GetTickerInfoR] Failed to scan row: %w\n", rowErr)
-		}
+// 	var response []SecEntry
 
-		response = append(response, _response)
-	}
+// 	for rows.Next() {
+// 		var _response SecEntry
+// 		rowErr := rows.Scan(
+// 			&_response.CIKStr,
+// 			&_response.Ticker,
+// 			&_response.Title,
+// 		)
+// 		if rowErr != nil {
+// 			return nil, fmt.Errorf("[GetTickerInfoR] Failed to scan row: %w\n", rowErr)
+// 		}
 
-	queryErr := rows.Err()
-	if queryErr != nil {
-		return nil, fmt.Errorf("[GetTickerInfoR] Error in rows query: %w\n", queryErr)
-	}
+// 		response = append(response, _response)
+// 	}
 
-	return response, nil
-}
+// 	queryErr := rows.Err()
+// 	if queryErr != nil {
+// 		return nil, fmt.Errorf("[GetTickerInfoR] Error in rows query: %w\n", queryErr)
+// 	}
+
+// 	return response, nil
+// }
 
 func InsertTickerInfoR(data *SecResponse) error {
-	fmt.Println(&data)
 	log.Println("[InsertTickerInfoR] Inserting company ticker info into db")
 	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
 	if dbErr != nil {
