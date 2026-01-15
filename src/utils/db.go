@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"strings"
 )
 
 type DbTables string
@@ -37,25 +38,41 @@ func InitDB() (map[DbTables]*sql.DB, error) {
 		USER_EMAIL,
 	}
 
+	dataDir, dataDirErr := os.ReadDir("_data")
+	if dataDirErr != nil {
+		log.Fatalf("[InitDB] Failed to read data dir %v\n", dataDirErr)
+	}
+
 	dbMap := make(map[DbTables]*sql.DB)
 	for _, path := range dbPaths {
 		sqlPath := fmt.Sprintf("_data/%s.db", path)
-		log.Printf("[InitDB] Creating new db %s: \n", sqlPath)
 
+		isDbMissing := true
+
+		for i := range dataDir {
+			file := dataDir[i]
+			if strings.Contains(file.Name(), string(path)) {
+				isDbMissing = false
+				break
+			}
+		}
+
+		log.Printf("[InitDB] Opening db %s: \n", sqlPath)
 		db, dbErr := sql.Open("sqlite3", sqlPath)
 		if dbErr != nil {
 			return nil, fmt.Errorf("[InitDB] Failed to open %s: %w", path, dbErr)
 		}
 
-		createTblErr := CreateTable(path, db)
-		if createTblErr != nil {
-			return nil, fmt.Errorf("[InitDB] Failed to create new db %s: %w", path, createTblErr)
+		if isDbMissing {
+			log.Printf("[InitDB] Creating new db %s: \n", sqlPath)
+			createTblErr := CreateTable(path, db)
+			if createTblErr != nil {
+				return nil, fmt.Errorf("[InitDB] Failed to create new db %s: %w", path, createTblErr)
+			}
 		}
 
 		dbMap[path] = db
 	}
-
-	log.Println("[InitDB] Finished initializing databases")
 
 	return dbMap, nil
 }
