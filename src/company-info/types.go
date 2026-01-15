@@ -6,4 +6,4 @@ type SecEntry struct {
 	Title  string `json:"title"`
 }
 
-type SecResponse map[string]SecEntry
+type SecEntryRes map[string]SecEntry

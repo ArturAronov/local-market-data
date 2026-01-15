@@ -86,7 +86,7 @@ const (
 // 	return response, nil
 // }
 
-func InsertTickerInfoR(data *SecResponse) error {
+func InsertTickerInfoR(data *SecEntryRes) error {
 	log.Println("[InsertTickerInfoR] Inserting company ticker info into db")
 	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
 	if dbErr != nil {
