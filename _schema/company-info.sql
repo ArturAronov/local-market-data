@@ -1,9 +1,16 @@
 CREATE TABLE IF NOT EXISTS company (
-    cik         INTEGER     PRIMARY KEY,
-    name        TEXT        NOT NULL,
-    ticker      TEXT        NOT NULL,
-    next_10k    TIMESTAMP,
-    next_10q    TIMESTAMP
+    cik             INTEGER     PRIMARY KEY,
+    sic             TEXT,
+    name            TEXT,
+    ticker          TEXT,
+    phone           TEXT,
+    entry_type      TEXT,
+    owner_org       TEXT,
+    exchanges       TEXT,
+    description     TEXT,
+    fiscal_year_end TEXT,
+    latest_10k      TEXT,
+    latest_10q      TEXT
 );
 
 CREATE TABLE IF NOT EXISTS fact (
