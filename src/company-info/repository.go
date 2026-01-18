@@ -9,6 +9,30 @@ import (
 )
 
 const (
+	UPDATE_COMPANY = `
+		UPDATE company
+		SET
+			sic = ?,
+			name = ?,
+			ticker = ?,
+			phone = ?,
+			entry_type = ?,
+			owner_org = ?,
+			exchanges = ?,
+			description = ?,
+			fiscal_year_end = ?,
+			latest_10k = ?,
+			latest_10q = ?
+		WHERE cik = ?;`
+	SELECT_COMPANY = `
+		SELECT
+			cik,
+			name,
+			ticker,
+			latest_10k,
+			latest_10q
+		FROM company
+		WHERE cik = ?;`
 	DELETE_COMPANY     = `DELETE FROM company WHERE cik = ?;`
 	SELECT_ALL         = `SELECT cik, ticker, name FROM company;`
 	INSERT_TICKER_INFO = `
@@ -19,72 +43,93 @@ const (
 		) VALUES (?, ?, ?);`
 )
 
-// TODO: need to cleanup
+func GetCompanyR(cik int) (*Company, error) {
+	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
+	if dbErr != nil {
+		return nil, fmt.Errorf("[GetCompanyR] Failed to open database: %w", dbErr)
+	}
 
-// func DeleteTickerR(cik int64) error {
-// 	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
-// 	if dbErr != nil {
-// 		return fmt.Errorf("[DeleteTickerR] Failed to open database: %w", dbErr)
-// 	}
+	defer db.Close()
 
-// 	defer db.Close()
-// 	_, execErr := db.Exec(DELETE_COMPANY, cik)
-// 	if execErr != nil {
-// 		return fmt.Errorf(
-// 			"[DeleteTickerR] Failed to delete company from company_tickers with cik %d. %w",
-// 			cik,
-// 			execErr,
-// 		)
-// 	}
+	rows, rowsErr := db.Query(SELECT_COMPANY, cik)
+	if rowsErr != nil {
+		return nil, fmt.Errorf(
+			"[GetCompanyR] Failed to execute query SELECT_COMPANY: %s \n %w",
+			SELECT_COMPANY,
+			rowsErr,
+		)
+	}
 
-// 	return nil
-// }
+	defer rows.Close()
 
-// func GetTickerInfoR() ([]SecEntry, error) {
-// 	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
-// 	if dbErr != nil {
-// 		return nil, fmt.Errorf("[GetTickerInfoR] Failed to open database: %w", dbErr)
-// 	}
+	var response Company
+	rowErr := rows.Scan(
+		&response.Cik,
+		&response.Name,
+		&response.Ticker,
+		&response.Latest10k,
+		&response.Latest10q,
+	)
 
-// 	defer db.Close()
+	if response.Cik == 0 {
+		return nil, nil
+	}
 
-// 	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Minute)
-// 	defer cancel()
+	if rowErr != nil {
+		return nil, fmt.Errorf("[GetCompanyR] Failed to scan row: %w\n", rowErr)
+	}
 
-// 	rows, rowsErr := db.QueryContext(ctx, SELECT_ALL)
-// 	if rowsErr != nil {
-// 		return nil, fmt.Errorf(
-// 			"[GetTickerInfoR] Failed to execute query SELECT_ALL: %s \n %w",
-// 			SELECT_ALL,
-// 			rowsErr,
-// 		)
-// 	}
+	queryErr := rows.Err()
+	if queryErr != nil {
+		return nil, fmt.Errorf("[GetCompanyR] Error in rows query: %w\n", queryErr)
+	}
 
-// 	defer rows.Close()
+	return &response, nil
+}
 
-// 	var response []SecEntry
+func UpdateCompanyR(company Company) error {
+	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
+	if dbErr != nil {
+		return fmt.Errorf("[UpdateCompanyR] Failed to open database: %w", dbErr)
+	}
 
-// 	for rows.Next() {
-// 		var _response SecEntry
-// 		rowErr := rows.Scan(
-// 			&_response.CIKStr,
-// 			&_response.Ticker,
-// 			&_response.Title,
-// 		)
-// 		if rowErr != nil {
-// 			return nil, fmt.Errorf("[GetTickerInfoR] Failed to scan row: %w\n", rowErr)
-// 		}
+	defer db.Close()
 
-// 		response = append(response, _response)
-// 	}
+	result, resultErr := db.Exec(
+		UPDATE_COMPANY,
+		company.Sic,
+		company.Name,
+		company.Ticker,
+		company.Phone,
+		company.EntryType,
+		company.OwnerOrg,
+		company.Exchanges,
+		company.Description,
+		company.FiscalYearEnd,
+		company.Latest10k,
+		company.Latest10q,
+		company.Cik,
+	)
 
-// 	queryErr := rows.Err()
-// 	if queryErr != nil {
-// 		return nil, fmt.Errorf("[GetTickerInfoR] Error in rows query: %w\n", queryErr)
-// 	}
+	if resultErr != nil {
+		return fmt.Errorf(
+			"[UpdateCompanyR] Failed to execute query UPDATE_COMPANY: %s \n %w",
+			UPDATE_COMPANY,
+			resultErr,
+		)
+	}
 
-// 	return response, nil
-// }
+	affected, affectedErr := result.RowsAffected()
+	if affectedErr != nil {
+		return fmt.Errorf("[UpdateCompanyR] Cannot get affected rows: %w", affectedErr)
+	}
+
+	if affected == 0 {
+		return fmt.Errorf("[UpdateCompanyR] No rows affected")
+	}
+
+	return nil
+}
 
 func InsertTickerInfoR(data *SecEntryRes) error {
 	log.Println("[InsertTickerInfoR] Inserting company ticker info into db")
