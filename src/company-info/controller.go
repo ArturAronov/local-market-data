@@ -4,8 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+
+	company_metadata "market-data/src/company-metadata"
 	"market-data/src/user"
 	"market-data/src/utils"
+	"strings"
 )
 
 func GetCompanyTickersC(email string) int {
@@ -41,5 +44,40 @@ func GetCompanyFactsC(cik int) {
 		log.Fatalf("[GetCompanyFactsC] failed to handle request %v", bodyErr)
 	}
 
-	fmt.Println(string(body))
+	var secRes CompanyFacts
+	jsonErr := json.Unmarshal(body, &secRes)
+	if jsonErr != nil {
+		log.Fatalf("[GetCompanyFactsC] failed to unmarshal JSON:\n%v\n,", jsonErr)
+	}
+
+	dbCompany, dbCompnayErr := GetCompanyR(cik)
+	if dbCompnayErr != nil {
+		log.Fatal(dbCompnayErr)
+	}
+
+	if dbCompany == nil {
+		var companyData Company
+		submissions := company_metadata.GetSubmissionsC(cik)
+		reportDates := company_metadata.GetLatestReportDate(submissions.Filings.Recent)
+
+		companyData.Cik = cik
+		companyData.Sic = submissions.SIKStr
+		companyData.Ticker = secRes.EntityName
+		companyData.Phone = submissions.Phone
+		companyData.EntryType = submissions.EntryType
+		companyData.OwnerOrg = submissions.OwnerOrg
+		companyData.Exchanges = strings.Join(submissions.Exchanges, ",")
+		companyData.Description = submissions.Description
+		companyData.FiscalYearEnd = submissions.FiscalYearEnd
+
+		if reportDates != nil {
+			companyData.Latest10k = reportDates.Latest10k
+			companyData.Latest10q = reportDates.Latest10q
+		}
+
+		updateErr := UpdateCompanyR(companyData)
+		if updateErr != nil {
+			log.Fatal(updateErr)
+		}
+	}
 }
