@@ -8,7 +8,7 @@ import (
 	"market-data/src/user"
 )
 
-func RunInit(args []string) error {
+func RunInit(args []string, userRepo *user.Repository, companyCtrl *company_info.Controller) error {
 	var email string
 
 	initFlags := flag.NewFlagSet("init", flag.ContinueOnError)
@@ -22,14 +22,14 @@ func RunInit(args []string) error {
 
 	initFlags.Args()
 
-	secResponseCode := company_info.GetCompanyTickersC(email)
+	secResponseCode := companyCtrl.GetCompanyTickersC(email)
 
 	if secResponseCode == 403 {
 		return fmt.Errorf("[RunInit] SEC response returned status code 403 (Forbidden), this is likely due to wrong email address provided")
 	}
 
 	if secResponseCode < 300 {
-		user.InsertUserEmail(email)
+		userRepo.InsertUserEmail(email)
 	}
 
 	return nil

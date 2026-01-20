@@ -15,7 +15,7 @@ type UserFlagsT struct {
 
 var userFlags UserFlagsT
 
-func RunUpdate(args []string) error {
+func RunUpdate(args []string, userRepo *user.Repository, companyCtrl *company_info.Controller) error {
 	initFlags := flag.NewFlagSet("update", flag.ContinueOnError)
 	initFlags.StringVar(&userFlags.email, "e", "", "Alias of --email")
 	initFlags.StringVar(&userFlags.email, "email", "", "Your email for userAgent header")
@@ -31,15 +31,15 @@ func RunUpdate(args []string) error {
 
 	switch {
 	case userFlags.email != "":
-		user.InsertUserEmail(userFlags.email)
+		userRepo.InsertUserEmail(userFlags.email)
 		fallthrough
 	case userFlags.companyTickers:
-		email, emailErr := user.GetUserEmail()
+		email, emailErr := userRepo.GetUserEmail()
 		if emailErr != nil {
 			return emailErr
 		}
 
-		company_info.GetCompanyTickersC(*email)
+		companyCtrl.GetCompanyTickersC(*email)
 		// fallthrough
 	default:
 		return fmt.Errorf("Flags can't be empty")

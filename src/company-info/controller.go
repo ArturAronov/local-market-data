@@ -5,11 +5,18 @@ import (
 	"fmt"
 	"log"
 
-	"market-data/src/user"
 	"market-data/src/utils"
 )
 
-func GetCompanyTickersC(email string) int {
+type Controller struct {
+	repo *Repository
+}
+
+func NewController(repo *Repository) *Controller {
+	return &Controller{repo: repo}
+}
+
+func (c *Controller) GetCompanyTickersC(email string) int {
 	url := "https://www.sec.gov/files/company_tickers.json"
 
 	body, res, bodyErr := utils.HttpReq(email, url)
@@ -23,21 +30,16 @@ func GetCompanyTickersC(email string) int {
 		log.Fatalf("[GetCompanyTickersC] Failed to unmarshal JSON:\n%v\n", jsonErr)
 	}
 
-	InsertTickerInfoR(&secRes)
+	c.repo.InsertTickerInfoR(&secRes)
 
 	return res.StatusCode
 }
 
-func GetCompanyFactsC(cik int) {
+func (c *Controller) GetCompanyFactsC(cik int, email string) {
 	cikStr := fmt.Sprintf("%010d", cik)
 	url := fmt.Sprintf("https://data.sec.gov/api/xbrl/companyfacts/CIK%s.json", cikStr)
 
-	email, emailErr := user.GetUserEmail()
-	if emailErr != nil {
-		log.Fatalf("[GetCompanyFactsC] Error getting user email: %v\n", emailErr)
-	}
-
-	body, _, bodyErr := utils.HttpReq(*email, url)
+	body, _, bodyErr := utils.HttpReq(email, url)
 	if bodyErr != nil {
 		log.Fatalf("[GetCompanyFactsC] failed to handle request %v", bodyErr)
 	}
@@ -48,12 +50,12 @@ func GetCompanyFactsC(cik int) {
 		log.Fatalf("[GetCompanyFactsC] failed to unmarshal JSON:\n%v\n,", jsonErr)
 	}
 
-	dbCompany, dbCompnayErr := GetCompanyR(cik)
+	dbCompany, dbCompnayErr := c.repo.GetCompanyR(cik)
 	if dbCompnayErr != nil {
 		log.Fatal(dbCompnayErr)
 	}
 
 	if dbCompany == nil {
-		EnterCompanyInfo(cik)
+		c.EnterCompanyInfo(cik, email)
 	}
 }

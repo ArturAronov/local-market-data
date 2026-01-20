@@ -5,9 +5,9 @@ import (
 	"strings"
 )
 
-func EnterCompanyInfo(cik int) error {
+func (c *Controller) EnterCompanyInfo(cik int, email string) error {
 	var companyData Company
-	submissions := company_metadata.GetSubmissionsC(cik)
+	submissions := company_metadata.GetSubmissionsC(cik, email)
 	reportDates := company_metadata.GetLatestReportDate(submissions.Filings.Recent)
 
 	companyData.Cik = cik
@@ -25,7 +25,7 @@ func EnterCompanyInfo(cik int) error {
 		companyData.Latest10q = reportDates.Latest10q
 	}
 
-	updateErr := UpdateCompanyR(companyData)
+	updateErr := c.repo.UpdateCompanyR(companyData)
 	if updateErr != nil {
 		return updateErr
 	}

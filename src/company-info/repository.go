@@ -43,15 +43,16 @@ const (
 		) VALUES (?, ?, ?);`
 )
 
-func GetCompanyR(cik int) (*Company, error) {
-	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
-	if dbErr != nil {
-		return nil, fmt.Errorf("[GetCompanyR] Failed to open database: %w", dbErr)
-	}
+type Repository struct {
+	db *sql.DB
+}
 
-	defer db.Close()
+func NewRepository(db *sql.DB) *Repository {
+	return &Repository{db: db}
+}
 
-	rows, rowsErr := db.Query(SELECT_COMPANY, cik)
+func (r *Repository) GetCompanyR(cik int) (*Company, error) {
+	rows, rowsErr := r.db.Query(SELECT_COMPANY, cik)
 	if rowsErr != nil {
 		return nil, fmt.Errorf(
 			"[GetCompanyR] Failed to execute query SELECT_COMPANY: %s \n %w",
@@ -87,15 +88,8 @@ func GetCompanyR(cik int) (*Company, error) {
 	return &response, nil
 }
 
-func UpdateCompanyR(company Company) error {
-	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
-	if dbErr != nil {
-		return fmt.Errorf("[UpdateCompanyR] Failed to open database: %w", dbErr)
-	}
-
-	defer db.Close()
-
-	result, resultErr := db.Exec(
+func (r *Repository) UpdateCompanyR(company Company) error {
+	result, resultErr := r.db.Exec(
 		UPDATE_COMPANY,
 		company.Sic,
 		company.Name,
@@ -131,16 +125,9 @@ func UpdateCompanyR(company Company) error {
 	return nil
 }
 
-func InsertTickerInfoR(data *SecEntryRes) error {
+func (r *Repository) InsertTickerInfoR(data *SecEntryRes) error {
 	log.Println("[InsertTickerInfoR] Inserting company ticker info into db")
-	db, dbErr := sql.Open("sqlite3", "_data/company-info.db")
-	if dbErr != nil {
-		return fmt.Errorf("[InsertTickerInfoR] Failed to open database: %w", dbErr)
-	}
-
-	defer db.Close()
-
-	tx, txErr := db.Begin()
+	tx, txErr := r.db.Begin()
 	if txErr != nil {
 		return fmt.Errorf("[InsertTickerInfoR] Failed to start transaction: %w", txErr)
 	}

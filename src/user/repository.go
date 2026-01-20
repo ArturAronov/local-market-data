@@ -18,13 +18,16 @@ const (
 		WHERE id=1;`
 )
 
-func InsertUserEmail(email string) error {
-	db, dbErr := sql.Open("sqlite3", "_data/user-email.db")
-	if dbErr != nil {
-		return fmt.Errorf("[InsertUserEmail] Failed to open database: %w", dbErr)
-	}
+type Repository struct {
+	db *sql.DB
+}
 
-	_, execErr := db.Exec(
+func NewRepository(db *sql.DB) *Repository {
+	return &Repository{db: db}
+}
+
+func (r *Repository) InsertUserEmail(email string) error {
+	_, execErr := r.db.Exec(
 		INSERT_USER_EMAIL,
 		email,
 	)
@@ -36,15 +39,10 @@ func InsertUserEmail(email string) error {
 	return nil
 }
 
-func GetUserEmail() (*string, error) {
+func (r *Repository) GetUserEmail() (*string, error) {
 	var email string
 
-	db, dbErr := sql.Open("sqlite3", "_data/user-email.db")
-	if dbErr != nil {
-		return nil, fmt.Errorf("Failed to open database: %w", dbErr)
-	}
-
-	queryErr := db.QueryRow(GET_USER_EMAIL).Scan(&email)
+	queryErr := r.db.QueryRow(GET_USER_EMAIL).Scan(&email)
 
 	if email == "" {
 		return nil, fmt.Errorf("No user email set. Run 'init --email <your-email>'")
