@@ -1,5 +1,7 @@
 package company_info
 
+import "time"
+
 type SecEntry struct {
 	CIKStr int64  `json:"cik_str"`
 	Ticker string `json:"ticker"`
@@ -34,7 +36,7 @@ type CompanyFacts struct {
 }
 
 // Company db table types
-type Company struct {
+type DbCompany struct {
 	Cik           int    `json:"cik"`
 	Sic           string `json:"sic"`
 	Name          string `json:"name"`
@@ -47,4 +49,28 @@ type Company struct {
 	FiscalYearEnd string `json:"fiscal_year_end"`
 	Latest10k     string `json:"latest_10k"`
 	Latest10q     string `json:"latest_10q"`
+}
+
+type DbFact struct {
+	Cik         int    `json:"company_cik"`
+	FactKey     string `json:"fact_key"`
+	Namespace   string `json:"namespace"`
+	Label       string `json:"label"`
+	Description string `json:"description"`
+	Unit        string `json:"unit"`
+}
+
+type DbReport struct {
+	Id      int        `json:"id"`
+	Cik     int        `json:"cik"`
+	FactKey string     `json:"fact_key"`
+	Start   *time.Time `json:"start"`
+	End     *time.Time `json:"end"`
+	Val     float64    `json:"val"`
+	Accn    *string    `json:"accn"`
+	Fy      *int       `json:"fy"`
+	Fp      *string    `json:"fp"`
+	Form    string     `json:"form"`
+	Filed   time.Time  `json:"filed"`
+	Frame   *string    `json:"frame"`
 }
