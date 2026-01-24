@@ -57,5 +57,6 @@ func (c *Controller) GetCompanyFactsC(cik int, email string) {
 
 	if dbCompany == nil {
 		c.EnterCompanyInfo(cik, email)
+		c.EnterCompanyFacts(secRes)
 	}
 }
