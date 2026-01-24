@@ -39,8 +39,9 @@ CREATE TABLE IF NOT EXISTS report_data (
     form      TEXT            NOT NULL,
     filed     TIMESTAMP       NOT NULL,
     frame     TEXT,
+    hash      BLOB            NOT NULL,
 
-    UNIQUE(cik, fact_key, start, end, accn, form),
+    UNIQUE(cik, hash),
     FOREIGN KEY (cik) REFERENCES company(cik),
     FOREIGN KEY (fact_key) REFERENCES fact(fact_key)
 );

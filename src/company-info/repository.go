@@ -62,8 +62,9 @@ const (
 			fp,
 			form,
 			filed,
-			frame
-		) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`
+			frame,
+			hash
+		) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`
 )
 
 type Repository struct {
@@ -250,6 +251,7 @@ func (r *Repository) InsertCompanyReportsR(data []DbReport) error {
 			entry.Form,
 			entry.Filed,
 			entry.Frame,
+			entry.Hash,
 		)
 		if err != nil {
 			tx.Rollback()

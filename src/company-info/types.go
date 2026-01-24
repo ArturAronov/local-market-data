@@ -52,25 +52,26 @@ type DbCompany struct {
 }
 
 type DbFact struct {
-	Cik         int    `json:"company_cik"`
-	FactKey     string `json:"fact_key"`
-	Namespace   string `json:"namespace"`
-	Label       string `json:"label"`
-	Description string `json:"description"`
-	Unit        string `json:"unit"`
+	Cik         int
+	FactKey     string
+	Namespace   string
+	Label       string
+	Description string
+	Unit        string
 }
 
 type DbReport struct {
-	Id      int        `json:"id"`
-	Cik     int        `json:"cik"`
-	FactKey string     `json:"fact_key"`
-	Start   *time.Time `json:"start"`
-	End     *time.Time `json:"end"`
-	Val     float64    `json:"val"`
-	Accn    *string    `json:"accn"`
-	Fy      *int       `json:"fy"`
-	Fp      *string    `json:"fp"`
-	Form    string     `json:"form"`
-	Filed   time.Time  `json:"filed"`
-	Frame   *string    `json:"frame"`
+	Id      int
+	Cik     int
+	FactKey string
+	Start   *time.Time
+	End     *time.Time
+	Val     float64
+	Accn    *string
+	Fy      *int
+	Fp      *string
+	Form    string
+	Filed   time.Time
+	Frame   *string
+	Hash    []byte
 }

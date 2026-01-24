@@ -1,11 +1,47 @@
 package company_info
 
 import (
+	"crypto/sha256"
+	"fmt"
 	"log"
 	company_metadata "market-data/src/company-metadata"
 	"market-data/src/utils"
 	"strings"
 )
+
+func getReportHash(report DbReport) []byte {
+	start := "nil"
+	if report.Start != nil {
+		start = report.Start.String()
+	}
+
+	end := "nil"
+	if report.End != nil {
+		end = report.End.String()
+	}
+
+	accn := "nil"
+	if report.Accn != nil {
+		accn = *report.Accn
+	}
+
+	reportStr := fmt.Sprintf(
+		"%s|%s|%s|%d|%v|%s|%s|%s",
+		report.FactKey,
+		report.Filed,
+		report.Form,
+		report.Cik,
+		report.Val,
+		start,
+		end,
+		accn,
+	)
+
+	hasher := sha256.New()
+	hasher.Write([]byte(reportStr))
+
+	return hasher.Sum(nil)
+}
 
 func (c *Controller) EnterCompanyInfo(cik int, email string) error {
 	var companyData DbCompany
@@ -111,6 +147,9 @@ func (c *Controller) EnterCompanyFacts(data CompanyFacts) error {
 
 						report.Filed = filedDate
 					}
+
+					hash := getReportHash(report)
+					report.Hash = hash
 
 					reportData = append(reportData, report)
 				}
