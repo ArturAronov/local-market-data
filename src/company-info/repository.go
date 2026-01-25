@@ -4,19 +4,19 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"strings"
 
 	_ "github.com/mattn/go-sqlite3"
 )
 
 const (
-	DELETE_COMPANY = `DELETE FROM company WHERE cik = ?;`
-	SELECT_ALL     = `SELECT cik, ticker, name FROM company;`
-	UPDATE_COMPANY = `
+	SELECT_CIK_BY_TICKER = `SELECT cik FROM company WHERE ticker = ?;`
+	COUNT_COMPANY_FACT   = `SELECT COUNT (fact_key) FROM fact WHERE cik = ?`
+	UPDATE_COMPANY       = `
 		UPDATE company
 		SET
 			sic = ?,
 			name = ?,
-			ticker = ?,
 			phone = ?,
 			entry_type = ?,
 			owner_org = ?,
@@ -35,7 +35,7 @@ const (
 			latest_10q
 		FROM company
 		WHERE cik = ?;`
-	INSERT_TICKER_INFO = `
+	INSERT_COMPANY_INFO = `
 		INSERT OR IGNORE INTO company (
 			cik,
 			ticker,
@@ -75,20 +75,62 @@ func NewRepository(db *sql.DB) *Repository {
 	return &Repository{db: db}
 }
 
-func (r *Repository) GetCompanyR(cik int) (*DbCompany, error) {
-	rows, rowsErr := r.db.Query(SELECT_COMPANY, cik)
-	if rowsErr != nil {
-		return nil, fmt.Errorf(
-			"[GetCompanyR] Failed to execute query SELECT_COMPANY: %s \n %w",
-			SELECT_COMPANY,
-			rowsErr,
+func (r *Repository) CountCompanyFactsR(cik int) (int, error) {
+	var count int
+	rowErr := r.db.QueryRow(
+		COUNT_COMPANY_FACT,
+		cik,
+	).Scan(&count)
+
+	if count == 0 {
+		return count, nil
+	}
+
+	if rowErr != nil {
+		return 0, fmt.Errorf(
+			"[CountCompanyFactsR] Failed to execute query SELECT_CIK_BY_TICKER: %s \n %w",
+			COUNT_COMPANY_FACT,
+			rowErr,
 		)
 	}
 
-	defer rows.Close()
+	return count, nil
+}
 
+func (r *Repository) GetCikByTickerR(ticker string) (string, error) {
+	var cik string
+	rowErr := r.db.QueryRow(
+		SELECT_CIK_BY_TICKER,
+		strings.ToUpper(ticker),
+	).Scan(&cik)
+
+	if cik == "" {
+		return "", fmt.Errorf(
+			"[GetCikByTicker] No CIK found for ticker: %s", strings.ToUpper(ticker),
+		)
+	}
+
+	if rowErr != nil {
+		return "", fmt.Errorf(
+			"[GetCikByTicker] Failed to execute query SELECT_CIK_BY_TICKER: %s \n %w",
+			SELECT_CIK_BY_TICKER,
+			rowErr,
+		)
+	}
+
+	if cik == "" {
+		return "", fmt.Errorf("[GetCikByTicker] No CIK found for ticker: %s\n", ticker)
+	}
+
+	return cik, nil
+}
+
+func (r *Repository) GetCompanyR(cik int) (*DbCompany, error) {
 	var response DbCompany
-	rowErr := rows.Scan(
+	rowErr := r.db.QueryRow(
+		SELECT_COMPANY,
+		cik,
+	).Scan(
 		&response.Cik,
 		&response.Name,
 		&response.Ticker,
@@ -101,12 +143,11 @@ func (r *Repository) GetCompanyR(cik int) (*DbCompany, error) {
 	}
 
 	if rowErr != nil {
-		return nil, fmt.Errorf("[GetCompanyR] Failed to scan row: %w\n", rowErr)
-	}
-
-	queryErr := rows.Err()
-	if queryErr != nil {
-		return nil, fmt.Errorf("[GetCompanyR] Error in rows query: %w\n", queryErr)
+		return nil, fmt.Errorf(
+			"[GetCompanyR] Failed to execute query SELECT_COMPANY: %s \n %w",
+			SELECT_COMPANY,
+			rowErr,
+		)
 	}
 
 	return &response, nil
@@ -117,7 +158,6 @@ func (r *Repository) UpdateCompanyR(company DbCompany) error {
 		UPDATE_COMPANY,
 		company.Sic,
 		company.Name,
-		company.Ticker,
 		company.Phone,
 		company.EntryType,
 		company.OwnerOrg,
@@ -296,7 +336,7 @@ func (r *Repository) InsertTickerInfoR(data *SecEntryRes) error {
 		}
 	}()
 
-	query, queryErr := tx.Prepare(INSERT_TICKER_INFO)
+	query, queryErr := tx.Prepare(INSERT_COMPANY_INFO)
 	if queryErr != nil {
 		return fmt.Errorf(
 			"[InsertTickerInfoR] Failed to prepare insert statement: %w",
