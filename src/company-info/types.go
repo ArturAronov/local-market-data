@@ -37,18 +37,18 @@ type CompanyFacts struct {
 
 // Company db table types
 type DbCompany struct {
-	Cik           int    `json:"cik"`
-	Sic           string `json:"sic"`
-	Name          string `json:"name"`
-	Ticker        string `json:"ticker"`
-	Phone         string `json:"phone"`
-	EntryType     string `json:"entry_type"`
-	OwnerOrg      string `json:"owner_org"`
-	Exchanges     string `json:"exchanges"`
-	Description   string `json:"description"`
-	FiscalYearEnd string `json:"fiscal_year_end"`
-	Latest10k     string `json:"latest_10k"`
-	Latest10q     string `json:"latest_10q"`
+	Cik           int     `json:"cik"`
+	Sic           string  `json:"sic"`
+	Name          string  `json:"name"`
+	Ticker        string  `json:"ticker"`
+	Phone         string  `json:"phone"`
+	EntryType     string  `json:"entry_type"`
+	OwnerOrg      string  `json:"owner_org"`
+	Exchanges     string  `json:"exchanges"`
+	Description   string  `json:"description"`
+	FiscalYearEnd string  `json:"fiscal_year_end"`
+	Latest10k     *string `json:"latest_10k"`
+	Latest10q     *string `json:"latest_10q"`
 }
 
 type DbFact struct {

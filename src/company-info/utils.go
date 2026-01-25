@@ -59,8 +59,8 @@ func (c *Controller) EnterCompanyInfo(cik int, email string) error {
 	companyData.FiscalYearEnd = submissions.FiscalYearEnd
 
 	if reportDates != nil {
-		companyData.Latest10k = reportDates.Latest10k
-		companyData.Latest10q = reportDates.Latest10q
+		companyData.Latest10k = &reportDates.Latest10k
+		companyData.Latest10q = &reportDates.Latest10q
 	}
 
 	updateErr := c.repo.UpdateCompanyR(companyData)
