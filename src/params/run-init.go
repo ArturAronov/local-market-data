@@ -1,4 +1,4 @@
-package initcmd
+package params
 
 import (
 	"flag"
@@ -8,7 +8,7 @@ import (
 	"market-data/src/user"
 )
 
-func RunInit(args []string, userRepo *user.Repository, companyCtrl *company_info.Controller) error {
+func runInit(args []string, userRepo *user.Repository, companyCtrl *company_info.Controller) error {
 	var email string
 
 	initFlags := flag.NewFlagSet("init", flag.ContinueOnError)
