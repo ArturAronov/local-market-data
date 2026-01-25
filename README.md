@@ -10,6 +10,12 @@ TODO:
 - SQLite
 - GCC (used by go-sqlite3)
 
+## Terminal commands
+
+- init -e / --email email@email.com
+- ci -t / --ticker amazon
+- ci -c / --cik 1018724
+
 SEC endpoints:
 
 - https://data.sec.gov/submissions/CIK0000320193.json (reports data)
