@@ -3,8 +3,8 @@ package params
 import (
 	"log"
 	company_info "market-data/src/company-info"
-	initcmd "market-data/src/init"
 	"market-data/src/user"
+	"strings"
 
 	"os"
 )
@@ -12,15 +12,15 @@ import (
 type Params string
 
 const (
-	TEST   Params = "test"
-	INIT   Params = "init"
-	UPDATE Params = "update"
+	INIT         Params = "init"
+	UPDATE       Params = "update"
+	COMPANY_INFO Params = "ci"
 )
 
 var paramsMap = map[Params]string{
-	TEST:   string(TEST),
-	INIT:   string(INIT),
-	UPDATE: string(UPDATE),
+	INIT:         string(INIT),
+	UPDATE:       string(UPDATE),
+	COMPANY_INFO: string(COMPANY_INFO),
 }
 
 func ParamsResover(userRepo *user.Repository, companyCtrl *company_info.Controller) {
@@ -40,25 +40,49 @@ func ParamsResover(userRepo *user.Repository, companyCtrl *company_info.Controll
 		log.Fatalf("Expected subcommand.")
 	}
 
+	if len(args) > 4 {
+		log.Fatalf(
+			"[ParamsResover] too many argumetns provided: %s",
+			strings.Join(args[4:], ", "),
+		)
+	}
+
 	switch args[1] {
-	case paramsMap[TEST]:
-		// submission_data.GetSubmissionDataC(1018724)
+	case paramsMap[INIT]:
+		runInitErr := runInit(args[2:], userRepo, companyCtrl)
+		if runInitErr != nil {
+			log.Fatalf(
+				"[ParamsResover] init error %v\n%v\n",
+				runInitErr,
+				os.Stderr,
+			)
+		}
+
+	case paramsMap[UPDATE]:
+		runUpdateErr := runUpdate(args[2:], userRepo, companyCtrl)
+		if runUpdateErr != nil {
+			log.Fatalf(
+				"[ParamsResover] update error %v\n%v\n",
+				runUpdateErr,
+				os.Stderr,
+			)
+		}
+
+	case paramsMap[COMPANY_INFO]:
 		email, err := userRepo.GetUserEmail()
 		if err != nil {
-			log.Fatalf("Failed to get user email for test: %v", err)
+			log.Fatalf("[ParamsResover] Failed to get user email for: %v", err)
 		}
-		companyCtrl.GetCompanyFactsC(1018724, *email)
-	case paramsMap[INIT]:
-		runInitErr := initcmd.RunInit(args[2:], userRepo, companyCtrl)
-		if runInitErr != nil {
-			log.Fatalf("ParamsResover: init error %v\n%v\n", runInitErr, os.Stderr)
+		runCompanyInfoErr := runCompanyInfo(args[2:], *email, companyCtrl)
+		if runCompanyInfoErr != nil {
+			log.Fatalf(
+				"[ParamsResover] update error %v\n%v\n",
+				runCompanyInfoErr,
+				os.Stderr,
+			)
 		}
-	case paramsMap[UPDATE]:
-		runInitErr := RunUpdate(args[2:], userRepo, companyCtrl)
-		if runInitErr != nil {
-			log.Fatalf("ParamsResover: init error %v\n%v\n", runInitErr, os.Stderr)
-		}
+
 	default:
-		log.Fatalf("Unknown subcommand: %v\n", args[1])
+		log.Fatalf("[ParamsResover] unknown subcommand: %v\n", args[1])
 	}
 }
