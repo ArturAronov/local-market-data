@@ -15,7 +15,11 @@ type UserFlagsT struct {
 
 var userFlags UserFlagsT
 
-func RunUpdate(args []string, userRepo *user.Repository, companyCtrl *company_info.Controller) error {
+func runUpdate(
+	args []string,
+	userRepo *user.Repository,
+	companyCtrl *company_info.Controller,
+) error {
 	initFlags := flag.NewFlagSet("update", flag.ContinueOnError)
 	initFlags.StringVar(&userFlags.email, "e", "", "Alias of --email")
 	initFlags.StringVar(&userFlags.email, "email", "", "Your email for userAgent header")

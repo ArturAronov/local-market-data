@@ -50,13 +50,24 @@ func (c *Controller) GetCompanyFactsC(cik int, email string) {
 		log.Fatalf("[GetCompanyFactsC] failed to unmarshal JSON:\n%v\n,", jsonErr)
 	}
 
-	dbCompany, dbCompnayErr := c.repo.GetCompanyR(cik)
-	if dbCompnayErr != nil {
-		log.Fatal(dbCompnayErr)
+	factCount, factCountErr := c.repo.CountCompanyFactsR(cik)
+	if factCountErr != nil {
+		log.Fatal(factCountErr)
 	}
 
-	if dbCompany == nil {
+	if factCount == 0 {
 		c.EnterCompanyInfo(cik, email)
 		c.EnterCompanyFacts(secRes)
+	} else {
+		// TODO: finish me
 	}
+}
+
+func (c *Controller) GetCikByTickerC(ticker string) string {
+	cik, cikErr := c.repo.GetCikByTickerR(ticker)
+	if cikErr != nil {
+		log.Fatal(cikErr)
+	}
+
+	return cik
 }
