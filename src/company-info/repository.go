@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"log"
 	"strings"
+	"time"
 
 	_ "github.com/mattn/go-sqlite3"
 )
 
 const (
-	SELECT_CIK_BY_TICKER = `SELECT cik FROM company WHERE ticker = ?;`
-	COUNT_COMPANY_FACT   = `SELECT COUNT (fact_key) FROM fact WHERE cik = ?`
-	UPDATE_COMPANY       = `
+	COUNT_COMPANY_FACT = `SELECT COUNT (fact_key) FROM fact WHERE cik = ?`
+	UPDATE_COMPANY     = `
 		UPDATE company
 		SET
 			sic = ?,
@@ -26,15 +26,47 @@ const (
 			latest_10k = ?,
 			latest_10q = ?
 		WHERE cik = ?;`
-	SELECT_COMPANY = `
+	SELECT_CIK_BY_TICKER = `SELECT cik FROM company WHERE ticker = ?;`
+	SELECT_COMPANY       = `
 		SELECT
 			cik,
+			sic,
 			name,
 			ticker,
+			phone,
+			entry_type,
+			owner_org,
+			exchanges,
+			description,
+			fiscal_year_end,
 			latest_10k,
 			latest_10q
 		FROM company
 		WHERE cik = ?;`
+	SELECT_FACTS_REPORTS = `SELECT
+		    f.fact_key,
+		    f.cik,
+		    f.namespace,
+		    f.label,
+		    f.description,
+		    f.unit,
+		    r.id,
+		    r.start,
+		    r.end,
+		    r.val,
+		    r.accn,
+		    r.fy,
+		    r.fp,
+		    r.form,
+		    r.filed,
+		    r.frame,
+		    r.hash
+		FROM fact f
+		LEFT JOIN report_data r
+			ON f.fact_key = r.fact_key
+			AND f.cik = r.cik
+		WHERE f.cik = 1018724
+		ORDER BY f.fact_key, r.filed DESC;`
 	INSERT_COMPANY_INFO = `
 		INSERT OR IGNORE INTO company (
 			cik,
@@ -73,6 +105,134 @@ type Repository struct {
 
 func NewRepository(db *sql.DB) *Repository {
 	return &Repository{db: db}
+}
+
+func (r *Repository) GetCompanyFactsReportsR(cik int) ([]DbFactsReports, error) {
+	rows, rowsErr := r.db.Query(SELECT_FACTS_REPORTS, cik)
+	if rowsErr != nil {
+		return nil, fmt.Errorf(
+			"[GetCompanyFactsReportsR]: Failed to get company facts & reports: \n%w",
+			rowsErr,
+		)
+	}
+	defer rows.Close()
+
+	factsMap := make(map[string]*DbFactsReports)
+	for rows.Next() {
+		var (
+			factKey   string
+			factCik   int
+			namespace string
+			label     string
+			desc      string
+			unit      string
+			reportId  sql.NullInt64
+			reportCik sql.NullInt64
+			start     sql.NullTime
+			end       sql.NullTime
+			val       sql.NullFloat64
+			accn      sql.NullString
+			fy        sql.NullInt64
+			fp        sql.NullString
+			form      sql.NullString
+			filed     sql.NullTime
+			frame     sql.NullString
+			hash      []byte
+		)
+
+		scanErr := rows.Scan(
+			&factKey,
+			&factCik,
+			&namespace,
+			&label,
+			&desc,
+			&unit,
+			&reportId,
+			&start,
+			&end,
+			&val,
+			&accn,
+			&fy,
+			&fp,
+			&form,
+			&filed,
+			&frame,
+			&hash,
+		)
+		if scanErr != nil {
+			return nil, fmt.Errorf("[GetCompanyFactsReportsR]: Failed to scan row: %w", scanErr)
+		}
+
+		if _, exists := factsMap[factKey]; !exists {
+			fr := &DbFactsReports{
+				Reports: []DbReport{},
+			}
+			fr.Cik = factCik
+			fr.FactKey = factKey
+			fr.Namespace = namespace
+			fr.Label = label
+			fr.Description = desc
+			fr.Unit = unit
+			factsMap[factKey] = fr
+		}
+
+		if reportId.Valid {
+			var accnPtr, fpPtr, formPtr, framePtr *string
+			if accn.Valid {
+				accnPtr = &accn.String
+			}
+			if fp.Valid {
+				fpPtr = &fp.String
+			}
+			if form.Valid {
+				formPtr = &form.String
+			}
+			if frame.Valid {
+				framePtr = &frame.String
+			}
+
+			var startPtr, endPtr *time.Time
+			if start.Valid {
+				startPtr = &start.Time
+			}
+			if end.Valid {
+				endPtr = &end.Time
+			}
+
+			var fyPtr *int
+			if fy.Valid {
+				fyVal := int(fy.Int64)
+				fyPtr = &fyVal
+			}
+
+			factsMap[factKey].Reports = append(factsMap[factKey].Reports, DbReport{
+				Id:      int(reportId.Int64),
+				Cik:     int(reportCik.Int64),
+				FactKey: factKey,
+				Start:   startPtr,
+				End:     endPtr,
+				Val:     val.Float64,
+				Accn:    accnPtr,
+				Fy:      fyPtr,
+				Fp:      fpPtr,
+				Form:    *formPtr,
+				Filed:   filed.Time,
+				Frame:   framePtr,
+				Hash:    hash,
+			})
+		}
+	}
+
+	if rowsErr = rows.Err(); rowsErr != nil {
+		return nil, fmt.Errorf("[GetCompanyFactsReportsR]: Error iterating rows: %w", rowsErr)
+	}
+
+	result := make([]DbFactsReports, 0, len(factsMap))
+	for _, fr := range factsMap {
+		result = append(result, *fr)
+	}
+
+	return result, nil
 }
 
 func (r *Repository) CountCompanyFactsR(cik int) (int, error) {
@@ -132,8 +292,15 @@ func (r *Repository) GetCompanyR(cik int) (*DbCompany, error) {
 		cik,
 	).Scan(
 		&response.Cik,
+		&response.Sic,
 		&response.Name,
 		&response.Ticker,
+		&response.Phone,
+		&response.EntryType,
+		&response.OwnerOrg,
+		&response.Exchanges,
+		&response.Description,
+		&response.FiscalYearEnd,
 		&response.Latest10k,
 		&response.Latest10q,
 	)
