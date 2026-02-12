@@ -4,9 +4,14 @@ import (
 	"fmt"
 	"io"
 	"net/http"
+	"strings"
 )
 
 func HttpReq(email string, url string) ([]byte, *http.Response, error) {
+	if strings.Contains(url, "sec.gov") {
+		secRateLimiter.Wait()
+	}
+
 	client := &http.Client{}
 
 	req, reqErr := http.NewRequest("GET", url, nil)
@@ -29,7 +34,11 @@ func HttpReq(email string, url string) ([]byte, *http.Response, error) {
 	}
 
 	if res.StatusCode >= 300 {
-		return nil, nil, fmt.Errorf("Status code: %d, body: %s\n", res.StatusCode, string(body))
+		return nil, nil, fmt.Errorf(
+			"Status code: %d, body: %s\n",
+			res.StatusCode,
+			string(body),
+		)
 	}
 
 	return body, res, nil
