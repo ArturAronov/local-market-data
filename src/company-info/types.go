@@ -75,3 +75,17 @@ type DbReport struct {
 	Frame   *string
 	Hash    []byte
 }
+
+type DbFactsReports struct {
+	DbFact
+	Reports []DbReport
+}
+
+type DbCompanyFactsReports struct {
+	DbCompany
+	Dei      DbFactsReports
+	Srt      DbFactsReports
+	Invest   DbFactsReports
+	UsGaap   DbFactsReports
+	IfrsFull DbFactsReports
+}

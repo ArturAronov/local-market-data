@@ -59,7 +59,15 @@ func (c *Controller) GetCompanyFactsC(cik int, email string) {
 		c.EnterCompanyInfo(cik, email)
 		c.EnterCompanyFacts(secRes)
 	} else {
-		// TODO: finish me
+		company, companyErr := c.repo.GetCompanyR(cik)
+		if companyErr != nil {
+			log.Fatal(companyErr)
+		}
+
+		if company == nil {
+			log.Fatalf("No company data found in DB for CIK: %d", cik)
+		}
+
 	}
 }
 
