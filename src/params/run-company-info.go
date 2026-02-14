@@ -17,7 +17,7 @@ var companyInfoFlags CompanyInfoFlags
 func runCompanyInfo(args []string, email string, companyCtrl *company_info.Controller) error {
 	initFlags := flag.NewFlagSet("update", flag.ContinueOnError)
 	initFlags.IntVar(&companyInfoFlags.cik, "c", 0, "Alias of --cik")
-	initFlags.IntVar(&companyInfoFlags.cik, "cik", 0, "Your email for userAgent header")
+	initFlags.IntVar(&companyInfoFlags.cik, "cik", 0, "Company CIK number")
 	initFlags.StringVar(&companyInfoFlags.ticker, "t", "", "Alias for --ticker")
 	initFlags.StringVar(&companyInfoFlags.ticker, "ticker", "", "Database containing company ticker and CIK data")
 
@@ -38,7 +38,7 @@ func runCompanyInfo(args []string, email string, companyCtrl *company_info.Contr
 	}
 
 	if companyInfoFlags.cik > 0 {
-		companyCtrl.GetCompanyFactsC(companyInfoFlags.cik, email)
+		companyCtrl.GetCompanyFinancialReportsC(companyInfoFlags.cik, email)
 	}
 
 	return nil
