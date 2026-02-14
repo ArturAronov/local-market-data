@@ -235,7 +235,7 @@ func (r *Repository) GetCompanyFactsReportsR(cik int) ([]DbFactsReports, error) 
 	return result, nil
 }
 
-func (r *Repository) CountCompanyFactsR(cik int) (int, error) {
+func (r *Repository) CountCompanyReportDataR(cik int) (int, error) {
 	var count int
 	rowErr := r.db.QueryRow(
 		COUNT_COMPANY_FACT,
@@ -248,7 +248,7 @@ func (r *Repository) CountCompanyFactsR(cik int) (int, error) {
 
 	if rowErr != nil {
 		return 0, fmt.Errorf(
-			"[CountCompanyFactsR] Failed to execute query SELECT_CIK_BY_TICKER: %s \n %w",
+			"[CountCompanyReportDataR] Failed to execute query SELECT_CIK_BY_TICKER: %s \n %w",
 			COUNT_COMPANY_FACT,
 			rowErr,
 		)
@@ -356,17 +356,17 @@ func (r *Repository) UpdateCompanyR(company DbCompany) error {
 	return nil
 }
 
-func (r *Repository) InsertCompanyFactsR(data []DbFact) error {
+func (r *Repository) InsertCompanyFinancialDataR(data []DbFact) error {
 	if len(data) == 0 {
-		log.Println("[InsertCompanyFactsR] No facts to insert")
+		log.Println("[InsertCompanyFinancialDataR] No facts to insert")
 		return nil
 	}
 
-	log.Println("[InsertCompanyFactsR] Inserting company facts into db")
+	log.Println("[InsertCompanyFinancialDataR] Inserting company facts into db")
 
 	tx, err := r.db.Begin()
 	if err != nil {
-		return fmt.Errorf("[InsertCompanyFactsR] Failed to start transaction: %w", err)
+		return fmt.Errorf("[InsertCompanyFinancialDataR] Failed to start transaction: %w", err)
 	}
 
 	defer func() {
@@ -379,7 +379,7 @@ func (r *Repository) InsertCompanyFactsR(data []DbFact) error {
 	stmt, err := tx.Prepare(INSERT_COMPANY_FACT)
 	if err != nil {
 		tx.Rollback()
-		return fmt.Errorf("[InsertCompanyFactsR] Failed to prepare statement: %w", err)
+		return fmt.Errorf("[InsertCompanyFinancialDataR] Failed to prepare statement: %w", err)
 	}
 	defer stmt.Close()
 
@@ -396,7 +396,7 @@ func (r *Repository) InsertCompanyFactsR(data []DbFact) error {
 		)
 		if err != nil {
 			tx.Rollback()
-			return fmt.Errorf("[InsertCompanyFactsR] Failed to insert data: %w", err)
+			return fmt.Errorf("[InsertCompanyFinancialDataR] Failed to insert data: %w", err)
 		}
 
 		if rowsAffected, err := res.RowsAffected(); err == nil {
@@ -405,11 +405,11 @@ func (r *Repository) InsertCompanyFactsR(data []DbFact) error {
 	}
 
 	if err := tx.Commit(); err != nil {
-		return fmt.Errorf("[InsertCompanyFactsR] Failed to commit: %w", err)
+		return fmt.Errorf("[InsertCompanyFinancialDataR] Failed to commit: %w", err)
 	}
 
 	log.Printf(
-		"[InsertCompanyFactsR] Inserted %d facts (%d new rows)",
+		"[InsertCompanyFinancialDataR] Inserted %d facts (%d new rows)",
 		len(data), totalRowsAffected,
 	)
 
