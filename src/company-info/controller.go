@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"log"
 
+	company_metadata "market-data/src/company-metadata"
 	"market-data/src/utils"
 )
 
@@ -35,31 +36,42 @@ func (c *Controller) GetCompanyTickersC(email string) int {
 	return res.StatusCode
 }
 
-func (c *Controller) GetCompanyFactsC(cik int, email string) {
+func (c *Controller) GetCompanyFinancialReportsC(cik int, email string) {
 	cikStr := fmt.Sprintf("%010d", cik)
 	url := fmt.Sprintf("https://data.sec.gov/api/xbrl/companyfacts/CIK%s.json", cikStr)
 
 	body, _, bodyErr := utils.HttpReq(email, url)
 	if bodyErr != nil {
-		log.Fatalf("[GetCompanyFactsC] failed to handle request %v", bodyErr)
+		log.Fatalf("[GetCompanyFinancialReportsC] failed to handle request %v", bodyErr)
 	}
 
 	var secRes CompanyFacts
 	jsonErr := json.Unmarshal(body, &secRes)
 	if jsonErr != nil {
-		log.Fatalf("[GetCompanyFactsC] failed to unmarshal JSON:\n%v\n,", jsonErr)
+		log.Fatalf("[GetCompanyFinancialReportsC] failed to unmarshal JSON:\n%v\n,", jsonErr)
 	}
 
-	factCount, factCountErr := c.repo.CountCompanyFactsR(cik)
-	if factCountErr != nil {
-		log.Fatal(factCountErr)
+	reportsCount, reportsCountErr := c.repo.CountCompanyReportDataR(cik)
+	if reportsCountErr != nil {
+		log.Fatal(reportsCountErr)
 	}
 
-	if factCount == 0 {
+	if reportsCount == 0 {
 		c.EnterCompanyInfo(cik, email)
-		c.EnterCompanyFacts(secRes)
-	} else {
-		company, companyErr := c.repo.GetCompanyR(cik)
+		c.EnterFinancialReports(secRes, email)
+
+		return
+	}
+
+	company, companyErr := c.repo.GetCompanyR(cik)
+	submissionData := company_metadata.GetSubmissionsC(cik, email)
+	reportDates := company_metadata.GetLatestReportDate(submissionData.Filings.Recent)
+
+	if *company.Latest10k != reportDates.Latest10k ||
+		*company.Latest10q != reportDates.Latest10q {
+		c.EnterCompanyInfo(company.Cik, email)
+		c.EnterFinancialReports(secRes, email)
+
 		if companyErr != nil {
 			log.Fatal(companyErr)
 		}
