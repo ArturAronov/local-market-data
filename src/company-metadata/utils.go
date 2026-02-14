@@ -1,11 +1,11 @@
 package company_metadata
 
-type ReportDates struct {
+type reportDates struct {
 	Latest10k string
 	Latest10q string
 }
 
-func GetLatestReportDate(data RecentFilings) *ReportDates {
+func GetLatestReportDate(data RecentFilings) *reportDates {
 	var index10k *int
 	var index10q *int
 
@@ -26,7 +26,7 @@ func GetLatestReportDate(data RecentFilings) *ReportDates {
 	if index10k == nil && index10q == nil {
 		return nil
 	} else {
-		return &ReportDates{
+		return &reportDates{
 			Latest10k: data.FilingDate[*index10k],
 			Latest10q: data.FilingDate[*index10q],
 		}
