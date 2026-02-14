@@ -71,7 +71,7 @@ func (c *Controller) EnterCompanyInfo(cik int, email string) error {
 	return nil
 }
 
-func (c *Controller) EnterCompanyFacts(data CompanyFacts) error {
+func (c *Controller) EnterFinancialReports(data CompanyFacts, email string) error {
 	var factsData []DbFact
 	var reportData []DbReport
 
@@ -157,7 +157,7 @@ func (c *Controller) EnterCompanyFacts(data CompanyFacts) error {
 		}
 	}
 
-	insertFactsErr := c.repo.InsertCompanyFactsR(factsData)
+	insertFactsErr := c.repo.InsertCompanyFinancialDataR(factsData)
 	if insertFactsErr != nil {
 		return insertFactsErr
 	}
